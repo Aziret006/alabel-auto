@@ -46,7 +46,7 @@ const FooterForm = () => {
       color: '#fff',
       background: '#61dc03',
       position: 'top-end',
-      title: 'Данные отправлены!',
+      title: 'successfully sent!',
     })
   }
 

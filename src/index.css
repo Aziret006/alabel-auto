@@ -56,6 +56,7 @@ input[type="number"] {
     background: #231F1E;
     border-radius: 7px;
     text-decoration: none;
+    border: none;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -73,6 +74,7 @@ input[type="number"] {
     margin-left: 16px;
     right: 0;
     top: 0;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .button:hover {
@@ -85,6 +87,7 @@ input[type="number"] {
 
 .button:active, .button:active::after {
     background: #231F1E;
+    transition: background-color 0s ease-in-out;
 }
 
 @media screen and (max-width: 960px) {

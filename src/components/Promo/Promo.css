@@ -1,0 +1,68 @@
+.contacts_promo {
+    background: url("../../assets/images/contacts_promo.jpg") no-repeat 50% / cover;
+    min-height: 630px;
+}
+
+.promo_con {
+    padding-top: 230px !important;
+}
+
+.promo_con span {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.promo_con h1 {
+    max-width: 700px;
+    margin: 0;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 78px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+@media screen and (max-width: 1440px) {
+    .contacts_promo {
+        min-height: 530px;
+    }
+
+    .promo_con {
+        padding-top: 190px !important;
+    }
+
+    .promo_con span {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .promo_con h1 {
+        max-width: 600px;
+        font-size: 54px;
+        line-height: 66px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .contacts_promo {
+        min-height: 690px;
+    }
+
+    .promo_con {
+        padding-top: 220px !important;
+    }
+
+    .promo_con span {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .promo_con h1 {
+        font-size: 44px;
+        line-height: 54px;
+    }
+}

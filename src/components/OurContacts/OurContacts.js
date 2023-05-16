@@ -3,8 +3,8 @@ import Title from '../UI/Title/Title'
 import SubTitle from '../UI/SubTitle/SubTitle'
 import './OurContacts.css'
 
-const OurContacts = () => (
-  <div className="container our_contacts_con">
+const OurContacts = ({ classes }) => (
+  <div className={`container our_contacts_con ${classes}`}>
     <div className="all_title_block">
       <Title title="Contact us" />
       <SubTitle subtitle="Lorem ipsum dolor sit amet consectetur. Elit dolor sed nec aliquam ultrices in aliquet. " />
