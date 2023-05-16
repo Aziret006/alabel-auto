@@ -1,24 +1,102 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 18px;
+    color: #231F1E;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-.container {
-  max-width: 1540px;
-  margin: 0 auto;
-  padding: 0 50px;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-@media screen and (max-width: 960px){
-  .container {
-    padding: 0 16px;
-  }
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.container {
+    max-width: 1540px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.all_title_block {
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.all_title_block h3 {
+    margin: 5px 0 10px;
+}
+
+.button {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 17px 48px 17px 0;
+    color: #FFFFFF;
+    background: #231F1E;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.footer_btn {
+    background: #FFFFFF;
+    color: #231F1E;
+}
+
+.button::after {
+    position: absolute;
+    content: url("./assets/icons/button-arrow.png");
+    background: #F47721;
+    border-radius: 0 5px 5px 0;
+    padding: 17px 28px 17px 20px;
+    margin-left: 16px;
+    right: 0;
+    top: 0;
+}
+
+.button:hover {
+    background: #F47721;
+}
+
+.footer_btn:hover {
+    color: #fff;
+}
+
+.button:active, .button:active::after {
+    background: #231F1E;
+}
+
+@media screen and (max-width: 960px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .all_title_block {
+        max-width: 542px;
+    }
+
+    .button {
+        font-size: 16px;
+    }
 }

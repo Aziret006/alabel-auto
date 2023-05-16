@@ -1,0 +1,51 @@
+.nav {
+    max-width: 820px;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin-right: 60px;
+}
+
+.nav ul li:last-child {
+    margin-right: 0 !important;
+}
+
+@media screen and (max-width: 1440px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav {
+        display: none;
+        margin-left: 0;
+    }
+
+    .nav.nav_active {
+        display: block;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-left: 15px;
+    }
+
+    .nav ul li {
+        width: 100%;
+        margin-bottom: 44px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .nav ul li {
+        margin-bottom: 30px;
+    }
+}

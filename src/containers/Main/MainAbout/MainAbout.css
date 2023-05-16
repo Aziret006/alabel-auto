@@ -1,0 +1,113 @@
+.main_about {
+    padding-top: 160px;
+    position: relative;
+    background: url("../../../assets/images/sheet.png") no-repeat -3% 30px / 15%;
+}
+
+.main_about_flex {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.main_about_left {
+    position: relative;
+}
+
+.main_about_left img {
+    width: 100%;
+}
+
+.main_about_left div {
+    position: absolute;
+    background: #F47721;
+    border-radius: 3px;
+    width: 90px;
+    height: 90px;
+    right: -30px;
+    bottom: -20px;
+}
+
+.main_about_right p {
+    max-width: 480px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 185%;
+    margin: 50px 0 60px;
+}
+
+.main_about_button {
+    width: 178px;
+}
+
+.main_about_canada {
+    position: absolute;
+    width: 20%;
+    right: 0;
+    bottom: -32%;
+}
+
+@media screen and (max-width: 1440px) {
+    .main_about {
+        padding-top: 120px;
+    }
+
+    .main_about_left {
+        max-width: 468px;
+    }
+
+    .main_about_left div {
+        width: 80px;
+        height: 80px;
+    }
+
+    .main_about_right p {
+        max-width: 400px;
+        font-size: 16px;
+    }
+
+    .main_about_button {
+        width: 166px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .main_about_flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .main_about_left {
+        max-width: 360px;
+        padding-right: 15px;
+    }
+
+    .main_about_left div {
+        width: 60px;
+        height: 60px;
+        right: -5px;
+        bottom: -10px;
+    }
+
+    .main_about_right p {
+        max-width: 360px;
+        font-size: 14px;
+        margin: 36px 0;
+    }
+
+    .main_about_button {
+        margin-inline: auto;
+        padding-right: 30px;
+    }
+
+    .main_about_canada {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .main_about {
+        padding-top: 50px;
+    }
+}

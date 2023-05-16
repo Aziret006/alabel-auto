@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.12.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -11,6 +14,9 @@
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "react-transition-group": "^4.4.5",
+    "sweetalert2": "^11.7.5",
+    "swiper": "^9.2.4",
+    "tss-react": "^4.8.2",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
@@ -32,7 +38,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:js": "eslint --ext jsx,js src/",
+    "lint:js:fix": "eslint --ext jsx,js --fix src/",
+    "lint:all": "yarn lint:css && yarn lint:js"
   },
   "eslintConfig": {
     "extends": [

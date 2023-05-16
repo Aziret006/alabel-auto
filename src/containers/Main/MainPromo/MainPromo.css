@@ -1,0 +1,197 @@
+.main_promo {
+    background: #1F2022;
+}
+
+.main_promo_con {
+    height: 900px;
+    display: flex;
+    max-width: 1880px;
+    margin: 0 auto;
+    padding-right: 50px
+}
+
+.main_promo_left {
+    width: 65%;
+    background: url("../../../assets/images/main_promo.png") no-repeat 0 56%;
+    background-size: 75%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 350px;
+    position: relative;
+}
+
+.main_promo_in_title p {
+    margin: 0;
+}
+
+.main_promo_in_title {
+    z-index: 10;
+    top: 48%;
+    right: 0;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 496px;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 78px;
+    text-transform: uppercase;
+    color: #F47721;
+}
+
+.main_promo_in_title p:nth-child(2) {
+    color: #fff;
+    text-align: center;
+}
+
+.main_promo_in_title p:last-child {
+    text-align: end;
+}
+
+.main_promo_in_title p:last-child span {
+    color: #fff;
+}
+
+.main_promo_in_carousel {
+    width: 85%;
+    position: relative;
+}
+
+.main_promo_line {
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 63%;
+    transform: translateX(-61%);
+}
+
+.main_promo_smoke {
+    z-index: 9;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.main_promo_right {
+    width: 40%;
+    padding-left: 16px;
+}
+
+.main_promo_calculator {
+    margin-top: 110px;
+    max-width: 556px;
+    border: 1px solid #323131;
+    border-radius: 15px;
+}
+
+.main_promo_calculator h4 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 40px;
+    margin: 24px 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+@media screen and (max-width: 1440px) {
+    .main_promo_con {
+        height: 820px;
+        padding-right: 15px;
+    }
+
+    .main_promo_in_title {
+        width: 380px;
+        font-size: 54px;
+        line-height: 66px;
+    }
+
+    .main_promo_left {
+        background-size: 93%;
+        background-position: -300% 56%;
+    }
+
+    .main_promo_line {
+        left: 56%;
+        transform: translateX(-56%);
+    }
+
+    .main_promo_in_carousel {
+        width: 80%;
+    }
+
+    .main_promo_smoke {
+        bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .main_promo {
+        background: transparent;
+    }
+
+    .main_promo_con {
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .main_promo_in_title {
+        width: 320px;
+        font-size: 44px;
+        line-height: 56px;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .main_promo_left {
+        width: 100%;
+        height: 620px;
+        padding-top: 280px;
+        background-color: #1F2022;
+        background-position: 0;
+        background-size: cover;
+    }
+
+    .main_promo_line {
+        left: 95%;
+        transform: translateX(-95%);
+    }
+
+    .main_promo_in_carousel {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .main_promo_right {
+        padding-top: 40px;
+        padding-left: 0;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .main_promo_in_title {
+
+    }
+
+    .main_promo_left {
+        height: 500px;
+    }
+
+    .main_promo_line {
+        display: none;
+    }
+
+    .main_promo_in_carousel {
+        width: 320px;
+    }
+
+    .main_promo_smoke {
+        bottom: 35%;
+    }
+
+    .main_promo_right {
+        width: 340px;
+    }
+}

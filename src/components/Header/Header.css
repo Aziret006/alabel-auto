@@ -1,0 +1,220 @@
+.header_con {
+    position: relative;
+}
+
+.header_in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 22px;
+    width: 92%;
+    position: absolute;
+    z-index: 99;
+}
+
+.header_logo {
+    width: 200px;
+}
+
+.header_contacts {
+    width: 32%;
+    display: flex;
+    gap: 30px;
+}
+
+.header_contacts a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.header_contact {
+    position: relative;
+    width: max-content !important;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+    margin-right: 25px;
+    padding-left: 30px;
+}
+
+.header_contact::before {
+    position: absolute;
+    content: url("../../assets/icons/header_phone.png");
+    left: 0;
+    top: 1px;
+}
+
+.contacts_whatsapp {
+    background: #25D366 url("../../assets/icons/whatsapp.png") no-repeat 49% 50%;
+    background-size: 16px;
+}
+
+.contacts_instagram {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #FFD521 14.64%, #FFD020 18.54%, #FEC01E 23.42%, #FCA71B 28.82%, #FA8316 34.59%,
+    #F85510 40.67%, #F51E09 46.91%, #F30005 50%, #F20007 50.25%, #E1003B 56.83%, #D30067 63.29%, #C70088 69.49%,
+    #BF00A0 75.38%, #BB00AF 80.81%, #B900B4 85.36%);
+}
+
+.contacts_instagram a {
+    background: url("../../assets/icons/instagram.png") no-repeat 49% 50%;
+    background-size: 16px;
+}
+
+.contacts_fc {
+    background: #3B5998 url("../../assets/icons/fc.png") no-repeat 49% 50%;
+    background-size: 10px;
+}
+
+.contacts_telegram {
+    background: #22A6DC url("../../assets/icons/telegram.png") no-repeat 42% 50%;
+    background-size: 14px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    height: 5px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin: 6px;
+    transition: all 0.3s ease;
+}
+
+.line1 {
+    width: 50px;
+    transform-origin: top left;
+}
+
+.line3 {
+    width: 45px;
+    transform-origin: bottom left;
+}
+
+.line2 {
+    width: 30px;
+}
+
+.page {
+    display: none;
+}
+
+@media screen and (max-width: 1440px) {
+    .header_nav {
+        display: none;
+    }
+
+    .header_contacts {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .header_in {
+        width: 92%;
+        justify-content: space-between;
+    }
+
+    .burger {
+        display: block;
+        margin-bottom: -5px;
+    }
+
+    .burger div {
+        margin: 5px;
+    }
+
+    .burger.burger_active .line1 {
+        width: 25px;
+        height: 2px;
+        transform: rotate(45deg);
+    }
+
+    .burger.burger_active .line3 {
+        width: 25px;
+        height: 2px;
+        transform: rotate(-45deg);
+    }
+
+    .burger.burger_active .line2 {
+        opacity: 0;
+    }
+
+    .page {
+        display: flex;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: -150%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        transition: all 0.5s ease;
+    }
+
+    .page.page_active {
+        top: 120px;
+    }
+
+    .menu.menu_active {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .menu_info_block {
+        padding: 16px;
+    }
+
+    .menu_info_block p {
+        position: relative;
+        padding-left: 35px;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .menu_info_phone::before {
+        position: absolute;
+        content: url("../../assets/icons/header_phone.png");
+        left: 0;
+    }
+
+    .menu_info_jps::before {
+        position: absolute;
+        content: url("../../assets/icons/jps.png");
+        left: 5px;
+    }
+
+    .menu_info_block span, a {
+        font-size: 26px;
+        font-weight: 500;
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .menu_info_block {
+        width: 150px;
+    }
+
+    .menu_info_block p {
+        font-size: 18px;
+    }
+
+    .menu_info_block span, a {
+        font-size: 16px;
+    }
+}
