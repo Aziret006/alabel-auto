@@ -90,6 +90,13 @@ input[type="number"] {
     transition: background-color 0s ease-in-out;
 }
 
+.button:disabled {
+    pointer-events: none;
+    background: #ccc;
+    color: rgb(170, 170, 170);
+    cursor: wait;
+}
+
 @media screen and (max-width: 960px) {
     .container {
         padding: 0 16px;

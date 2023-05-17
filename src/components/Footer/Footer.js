@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../Logo/Logo'
-import FooterForm from './FooterForm/FooterForm'
+import Feedback from '../Feedback/Feedback'
 import './Footer.css'
 
 const Footer = () => (
@@ -32,7 +32,7 @@ const Footer = () => (
       </div>
       <div className="footer_top_right">
         <h5 className="footer_top_title">Subscribe</h5>
-        <FooterForm />
+        <Feedback footer />
       </div>
     </div>
     <hr className="footer_hr" />

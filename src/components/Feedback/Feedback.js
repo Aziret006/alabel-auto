@@ -6,6 +6,7 @@ import UpTitle from '../UI/UpTitle/UpTitle'
 
 import sheet from '../../assets/images/sheet.png'
 import co from '../../assets/images/CO.png'
+import axiosApi from '../../axiosApi'
 
 const useStyles = makeStyles()(theme => ({
   feedback: {
@@ -32,15 +33,25 @@ const useStyles = makeStyles()(theme => ({
       paddingTop: '70px',
     },
   },
+  footerInput: {
+    '& input': {
+      background: '#fff',
+      borderRadius: '4px',
+    },
+    '& .Mui-focused': {
+      fontSize: '20px',
+    },
+  },
 }))
 
-const Feedback = () => {
+const Feedback = ({ footer }) => {
   const { classes } = useStyles()
 
   const [state, setState] = useState({
     name: '',
     phone: '',
   })
+  const [loader, setLoader] = useState(false)
 
   const onChange = e => {
     const { name, value } = e.target
@@ -51,25 +62,80 @@ const Feedback = () => {
     }))
   }
 
-  const onSubmit = e => {
+  const onSubmit = async e => {
     e.preventDefault()
 
-    console.log(state)
-    Swal.fire({
-      toast: true,
-      timer: 3000,
-      timerProgressBar: true,
-      showConfirmButton: false,
-      iconColor: '#fff',
-      icon: 'success',
-      color: '#fff',
-      background: '#61dc03',
-      position: 'top-end',
-      title: 'successfully sent!',
-    })
+    try {
+      setLoader(true)
+      await axiosApi.post('/car_main/feedback/', state)
+
+      setLoader(false)
+      Swal.fire({
+        toast: true,
+        timer: 3000,
+        timerProgressBar: true,
+        showConfirmButton: false,
+        iconColor: '#fff',
+        icon: 'success',
+        color: '#fff',
+        background: '#61dc03',
+        position: 'top-end',
+        title: 'successfully sent!',
+      })
+    } catch (err) {
+      setLoader(false)
+      Swal.fire({
+        toast: true,
+        timer: 3000,
+        timerProgressBar: true,
+        showConfirmButton: false,
+        iconColor: '#fff',
+        icon: 'error',
+        color: '#fff',
+        background: '#dc030a',
+        position: 'top-end',
+        title: `${err.response.data.phone && err.response.data.phone}`,
+      })
+    }
   }
 
-  return (
+  return footer ? (
+    <Box component="form" onSubmit={onSubmit}>
+      <Grid container>
+        <Grid item xs={12} mb="20px">
+          <TextField
+            className={classes.footerInput}
+            name="name"
+            label="Name"
+            type="text"
+            color="orange"
+            fullWidth
+            value={state.name}
+            onChange={onChange}
+            required
+          />
+        </Grid>
+        <Grid item xs={12} mb="20px">
+          <TextField
+            className={classes.footerInput}
+            name="phone"
+            label="Phone"
+            type="tel"
+            color="orange"
+            fullWidth
+            value={state.phone}
+            onChange={onChange}
+            required
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <button className="button footer_btn" type="submit" disabled={loader}>
+            Send
+          </button>
+        </Grid>
+      </Grid>
+    </Box>
+  ) : (
     <Box className={classes.feedback}>
       <img
         src={sheet}
@@ -109,7 +175,7 @@ const Feedback = () => {
             />
           </Grid>
           <Grid item xs={12}>
-            <button className="button" type="submit">
+            <button className="button" type="submit" disabled={loader}>
               Send
             </button>
           </Grid>
