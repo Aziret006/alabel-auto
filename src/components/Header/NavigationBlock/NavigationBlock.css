@@ -18,6 +18,12 @@
 }
 
 @media screen and (max-width: 1440px) {
+    .nav ul li {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
     body {
         overflow-x: hidden;
     }

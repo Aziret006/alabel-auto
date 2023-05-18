@@ -3,6 +3,11 @@
     min-height: 630px;
 }
 
+.about_promo {
+    background: url("../../assets/images/about_promo.jpg") no-repeat 50% 70% / cover;
+    min-height: 630px;
+}
+
 .promo_con {
     padding-top: 230px !important;
 }
@@ -31,6 +36,10 @@
         min-height: 530px;
     }
 
+    .about_promo {
+        min-height: 530px;
+    }
+
     .promo_con {
         padding-top: 190px !important;
     }
@@ -49,6 +58,10 @@
 
 @media screen and (max-width: 720px) {
     .contacts_promo {
+        min-height: 690px;
+    }
+
+    .about_promo {
         min-height: 690px;
     }
 

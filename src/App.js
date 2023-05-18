@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Main from './containers/Main/Main'
 import Layout from './components/UI/Layout/Layout'
 import Contacts from './containers/Contacts/Contacts'
+import About from './containers/About/About'
 import './App.css'
 
 function App() {
@@ -16,11 +17,12 @@ function App() {
           <Routes location={location}>
             <Route path="/" element={<Main />} />
             <Route path="/contacts" element={<Contacts />} />
+            <Route path="/about" element={<About />} />
             <Route
               path="*"
               element={
                 <div className="not_page">
-                  <p className="not_page_text">Not page!</p>
+                  <p className="not_page_text">Not found!</p>
                 </div>
               }
             />

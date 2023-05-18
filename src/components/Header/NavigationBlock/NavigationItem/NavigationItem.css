@@ -21,6 +21,12 @@
 
 @media screen and (max-width: 1440px) {
     .nav_btn {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .nav_btn {
         color: #231F1E;
         font-size: 38px;
         font-weight: 500;
