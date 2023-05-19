@@ -8,6 +8,11 @@
     min-height: 630px;
 }
 
+.services_promo {
+    background: url("../../assets/images/services_promo.jpg") no-repeat 50% 65% / cover;
+    min-height: 630px;
+}
+
 .promo_con {
     padding-top: 230px !important;
 }
@@ -32,11 +37,7 @@
 }
 
 @media screen and (max-width: 1440px) {
-    .contacts_promo {
-        min-height: 530px;
-    }
-
-    .about_promo {
+    .contacts_promo, .about_promo, .services_promo {
         min-height: 530px;
     }
 
@@ -57,11 +58,7 @@
 }
 
 @media screen and (max-width: 720px) {
-    .contacts_promo {
-        min-height: 690px;
-    }
-
-    .about_promo {
+    .contacts_promo, .about_promo, .services_promo {
         min-height: 690px;
     }
 

@@ -1,6 +1,6 @@
 .services_card {
     position: relative;
-    max-width: 390px;
+    max-width: 252px;
     box-shadow: 0 1px 10px rgba(35, 31, 30, 0.09);
     border-radius: 5px;
     padding: 90px 56px 82px;
@@ -58,7 +58,6 @@
 
 @media screen and (max-width: 720px) {
     .services_card {
-        max-width: 295px;
         padding: 40px 34px 43px;
     }
 

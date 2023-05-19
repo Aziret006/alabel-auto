@@ -41,10 +41,12 @@ const Services = () => (
       <Title title="Services" />
       <SubTitle subtitle="Lorem ipsum dolor sit amet consectetur. Elit dolor sed nec aliquam ultrices in aliquet. " />
     </div>
-    <div className="services_cards">
-      {data?.map((item, i) => (
-        <ServicesCard key={`services${i}`} item={item} />
-      ))}
+    <div className="services_cards_row">
+      <div className="services_cards">
+        {data?.map((item, i) => (
+          <ServicesCard key={`services${i}`} item={item} />
+        ))}
+      </div>
     </div>
     <div className="services_brands_row">
       <Brands />

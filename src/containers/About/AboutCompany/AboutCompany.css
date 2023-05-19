@@ -42,7 +42,7 @@
 .about_block_bottom {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .about_block_image {

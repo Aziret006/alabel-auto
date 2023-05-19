@@ -5,6 +5,7 @@ import Main from './containers/Main/Main'
 import Layout from './components/UI/Layout/Layout'
 import Contacts from './containers/Contacts/Contacts'
 import About from './containers/About/About'
+import ServicesPage from './containers/ServicesPage/ServicesPage'
 import './App.css'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/about" element={<About />} />
+            <Route path="/services" element={<ServicesPage />} />
             <Route
               path="*"
               element={
