@@ -65,6 +65,12 @@ input[type="number"] {
     color: #231F1E;
 }
 
+.calculator_btn {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    color: #231F1E;
+}
+
 .button::after {
     position: absolute;
     content: url("./assets/icons/button-arrow.png");
@@ -95,6 +101,13 @@ input[type="number"] {
     background: #ccc;
     color: rgb(170, 170, 170);
     cursor: wait;
+}
+
+@media screen and (max-width: 1080px) {
+    .calculator_btn {
+        color: #FFFFFF;
+        background: #231F1E;
+    }
 }
 
 @media screen and (max-width: 960px) {

@@ -11,7 +11,7 @@
 }
 
 .main_promo_left {
-    width: 65%;
+    width: 60%;
     background: url("../../../assets/images/main_promo.png") no-repeat 0 56%;
     background-size: 75%;
     display: flex;
@@ -30,7 +30,7 @@
     right: 0;
     transform: translateY(-50%);
     position: absolute;
-    width: 496px;
+    width: 460px;
     font-weight: 600;
     font-size: 64px;
     line-height: 78px;
