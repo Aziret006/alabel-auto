@@ -27,6 +27,12 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+.css-gm0faa-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+    background-color: #F47721 !important;
+    pointer-events: none;
+    color: #fff;
+}
+
 .container {
     max-width: 1540px;
     margin: 0 auto;

@@ -1,5 +1,7 @@
 .car_card {
     position: relative;
+    box-shadow: 0 -1px 10px rgba(35, 31, 30, 0.05), 0 1px 10px rgba(35, 31, 30, 0.05);
+    border-radius: 5px;
 }
 
 .car_card_image {
@@ -14,10 +16,8 @@
 }
 
 .car_card_text {
-    padding: 30px 30px 35px;
+    padding: 35px 20px;
     background: #FFFFFF;
-    box-shadow: 0 -1px 10px rgba(35, 31, 30, 0.05), 0 1px 10px rgba(35, 31, 30, 0.05);
-    border-radius: 0 0 5px 5px;
 }
 
 .car_card_text h5 {
@@ -25,7 +25,10 @@
     font-weight: 500;
     font-size: 22px;
     line-height: 27px;
+    overflow: hidden;
     text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .car_card_text p {
@@ -33,6 +36,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+    margin-bottom: 0;
 }
 
 .car_card_text span {
@@ -45,7 +49,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    padding: 0 80px;
+    padding: 0 10%;
     top: 0;
     bottom: 100%;
     left: 0;
@@ -62,16 +66,35 @@
     bottom: 0;
 }
 
-@media screen and (max-width: 720px) {
-    .car_card {
+@media screen and (max-width: 1440px) {
+    .car_card_image {
+        height: 160px;
         max-width: 320px;
     }
 
-    .car_card_image {
-        height: 170px;
+    .car_card_text h5 {
+        font-size: 18px;
+        line-height: 22px;
     }
 
+    .car_card_text p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 960px) {
     .car_card_hover {
-        padding: 0 50px;
+        padding: 0 3%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .car_card {
+        max-width: 300px;
+    }
+
+    .car_card_image {
+        height: 150px;
     }
 }

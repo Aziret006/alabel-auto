@@ -1,0 +1,110 @@
+.search_title {
+    max-width: 740px;
+    margin: 95px auto 74px;
+}
+
+.cars_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter_menu {
+    display: none;
+    cursor: pointer;
+    background: #231F1E;
+    color: #fff;
+    margin: 0 -16px;
+    padding: 14px 0;
+    text-align: center;
+}
+
+.filter_menu span {
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.filter_menu span::after {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    content: '';
+    width: 0;
+    height: 0;
+    border-width: 5px 5px 0 5px;
+    border-color: #FFFFFF transparent transparent transparent;
+    border-style: solid;
+}
+
+.filter_menu_active {
+    background: #F47721;
+}
+
+.cars_left {
+    width: 27%;
+}
+
+.cars_left.cars_left_active {
+    height: auto
+}
+
+.cars_right {
+    width: 70%;
+}
+
+.search_cars {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 24px;
+}
+
+.car {
+    width: 32.3%;
+}
+
+@media screen and (max-width: 1080px) {
+    .cars_block {
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    .cars_right {
+        width: 100%;
+    }
+
+    .cars_left {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .search_cars {
+        justify-content: space-between;
+    }
+
+    .filter_menu {
+        display: block;
+    }
+
+    .cars_left {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .car {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .search_cars {
+        justify-content: center;
+    }
+
+    .car {
+        width: max-content;
+    }
+}

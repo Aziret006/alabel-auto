@@ -1,20 +1,25 @@
 .contacts_promo {
     background: url("../../assets/images/contacts_promo.jpg") no-repeat 50% / cover;
-    min-height: 630px;
+    min-height: 588px;
 }
 
 .about_promo {
     background: url("../../assets/images/about_promo.jpg") no-repeat 50% 70% / cover;
-    min-height: 630px;
+    min-height: 588px;
 }
 
 .services_promo {
     background: url("../../assets/images/services_promo.jpg") no-repeat 50% 65% / cover;
-    min-height: 630px;
+    min-height: 588px;
+}
+
+.auction_promo {
+    background: url("../../assets/images/auction-promo.jpg") no-repeat 50% 65% / cover;
+    min-height: 588px;
 }
 
 .promo_con {
-    padding-top: 230px !important;
+    padding-top: 198px !important;
 }
 
 .promo_con span {
@@ -37,7 +42,7 @@
 }
 
 @media screen and (max-width: 1440px) {
-    .contacts_promo, .about_promo, .services_promo {
+    .contacts_promo, .about_promo, .services_promo, .auction_promo {
         min-height: 530px;
     }
 
@@ -58,7 +63,7 @@
 }
 
 @media screen and (max-width: 720px) {
-    .contacts_promo, .about_promo, .services_promo {
+    .contacts_promo, .about_promo, .services_promo, .auction_promo {
         min-height: 690px;
     }
 

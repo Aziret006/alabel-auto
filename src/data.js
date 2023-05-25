@@ -8,6 +8,11 @@ import car2 from './assets/images/blue-car.jpg'
 import car3 from './assets/images/orange-car.jpg'
 import car4 from './assets/images/white-car.jpg'
 
+export const years = [
+  2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018,
+  2019, 2020, 2021, 2022, 2023,
+]
+
 export const mainAdvantages = [
   { img: percent, title: 'Lower prices due to favorable exchange rate' },
   { img: earth, title: 'Straightforward export process with help from a reliable company' },

@@ -1,5 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import { Box, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material'
+import {
+  Box,
+  CircularProgress,
+  FormControl,
+  Grid,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+  Typography,
+} from '@mui/material'
 import { makeStyles } from 'tss-react/mui'
 import { Link } from 'react-router-dom'
 import axiosApi from '../../../../axiosApi'
@@ -69,6 +79,7 @@ const MainCalculator = () => {
     body: '',
     price: 1000,
   })
+  const [loader, setLoader] = useState(false)
 
   useEffect(() => {
     const getCalculatorData = async () => {
@@ -88,19 +99,23 @@ const MainCalculator = () => {
       } catch {}
     }
 
-    getCalculatorData().catch(e => console.log(e))
+    getCalculatorData().catch()
   }, [])
 
   useEffect(() => {
     const calculate = async dataCalculator => {
       try {
+        setLoader(true)
         const { data } = await axiosApi.post('/car/calculator/', dataCalculator)
         setCalculator(prev => ({
           ...prev,
-          total: data.total,
-          service_auto_canada: data.service_auto_canada,
+          total: data?.total || 0,
+          service_auto_canada: data?.service_auto_canada || 0,
         }))
-      } catch {}
+        setLoader(false)
+      } catch {
+        setLoader(false)
+      }
     }
 
     if (
@@ -110,7 +125,7 @@ const MainCalculator = () => {
       calculateData.country_destination &&
       calculateData.price
     ) {
-      calculate(calculateData).catch(err => console.log(err))
+      calculate(calculateData).catch()
     }
   }, [calculateData])
 
@@ -405,7 +420,7 @@ const MainCalculator = () => {
               total amount
             </Typography>
             <Typography color="#F47721" sx={{ fontSize: { xs: '15px', lx: '18px', xl: '24px' } }}>
-              $ {calculator.total}
+              {loader ? <CircularProgress color="orange" size={20} /> : `$ ${calculator.total}`}
             </Typography>
           </Box>
         </Grid>
