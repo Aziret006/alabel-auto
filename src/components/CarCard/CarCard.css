@@ -20,7 +20,13 @@
     background: #FFFFFF;
 }
 
-.car_card_text h5 {
+.car_card_second_first, .car_card_second_line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.car_title {
+    width: 50%;
     margin: 0;
     font-weight: 500;
     font-size: 22px;
@@ -31,6 +37,20 @@
     text-overflow: ellipsis;
 }
 
+.car_lot {
+    width: 40%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.car_lot span {
+    color: #DC1820;
+}
+
 .car_card_text p {
     max-width: 300px;
     font-weight: 400;
@@ -39,7 +59,26 @@
     margin-bottom: 0;
 }
 
-.car_card_text span {
+.car_card_second_line span:first-child {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #DC1820;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.car_card_second_line span:last-child {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.car_card_third_line span {
     color: #DC1820;
     font-weight: 500;
 }

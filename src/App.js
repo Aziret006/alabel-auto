@@ -8,6 +8,7 @@ import About from './containers/About/About'
 import ServicesPage from './containers/ServicesPage/ServicesPage'
 import Auction from './containers/Auction/Auction'
 import './App.css'
+import DetailCar from './containers/DetailCar/DetailCar'
 
 function App() {
   const location = useLocation()
@@ -22,6 +23,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/auction" element={<Auction />} />
+            <Route path="/auction/:id" element={<DetailCar />} />
             <Route
               path="*"
               element={

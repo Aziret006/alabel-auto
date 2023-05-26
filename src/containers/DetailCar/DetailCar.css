@@ -1,0 +1,57 @@
+.toolbar {
+    min-height: 114px;
+    background: #1F2022;
+}
+
+.car_detail {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 90px;
+}
+
+.car_info {
+    width: 48%;
+}
+
+.car_info h3 {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.6vw;
+    line-height: 44px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #F47721;
+    padding-bottom: 12px;
+}
+
+.characteristics_p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.characteristics_p span:first-child {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #636262;
+}
+
+.characteristics_p span:nth-child(2) {
+    height: 20px;
+    min-width: 20px;
+    margin: 0 7px;
+    flex-grow: 1;
+    border-bottom: 1px solid #CBCBCB;
+}
+
+.characteristics_p span:last-child {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+@media screen and (max-width: 1440px) {
+    .toolbar {
+        min-height: 96px;
+    }
+}

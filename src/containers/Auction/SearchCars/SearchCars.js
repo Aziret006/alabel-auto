@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Pagination } from '@mui/material'
-import UpTitle from '../../../components/UI/UpTitle/UpTitle'
 import Title from '../../../components/UI/Title/Title'
 import SearchBlock from './SearchBlock/SearchBlock'
 import CarCard from '../../../components/CarCard/CarCard'
@@ -121,7 +120,6 @@ const SearchCars = () => {
   return (
     <>
       <div className="search_title">
-        <UpTitle uptitle="Portfolio" />
         <Title title="Steps to buy a car from Canada" />
       </div>
       <div className="container cars_block">

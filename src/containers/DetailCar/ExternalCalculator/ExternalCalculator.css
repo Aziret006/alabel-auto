@@ -1,0 +1,23 @@
+.external_calculator {
+    box-sizing: border-box;
+    width: 40%;
+    text-align: center;
+    border: 1px solid #CBCBCB;
+    padding: 36px 46px;
+    border-radius: 5px;
+}
+
+.external_calculator_car_lot {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.external_calculator_car_title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
