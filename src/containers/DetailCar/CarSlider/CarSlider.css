@@ -24,14 +24,6 @@
     object-fit: cover;
 }
 
-.swiper-zoom-container {
-    cursor: zoom-in;
-}
-
-.swiper-slide-zoomed .swiper-zoom-container {
-    cursor: zoom-out !important;
-}
-
 .car_slider .swiper {
     width: 100%;
     height: 300px;
@@ -45,7 +37,7 @@
 }
 
 .car_slider .car_slides {
-    height: 78%;
+    height: 79%;
     width: 100%;
     border-radius: 5px;
 }
@@ -54,7 +46,7 @@
     height: 18%;
     box-sizing: border-box;
     padding: 10px 30px;
-    margin: 16px 0;
+    margin: 16px 0 0;
     background: #FFFFFF;
     box-shadow: -2px -2px 5px rgba(35, 31, 30, 0.14), 2px 2px 5px rgba(35, 31, 30, 0.14);
     border-radius: 5px;
@@ -64,6 +56,7 @@
     width: 25%;
     height: 100%;
     opacity: 0.4;
+    cursor: pointer;
 }
 
 .car_slider .car_slider_thumbs .swiper-slide-thumb-active {
@@ -75,4 +68,24 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media screen and (max-width: 1440px) {
+    .car_slider {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .car_slider {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .car_slider {
+        max-width: 600px;
+        margin: 0 auto;
+        height: 300px;
+    }
 }

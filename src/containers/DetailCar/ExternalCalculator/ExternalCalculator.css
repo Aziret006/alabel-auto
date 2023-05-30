@@ -21,3 +21,53 @@
     line-height: 24px;
     text-transform: uppercase;
 }
+
+@media screen and (max-width: 1440px) {
+    .external_calculator {
+        padding: 32px 42px;
+    }
+
+    .external_calculator_car_lot {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .external_calculator_car_title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .external_calculator {
+        max-width: 600px;
+        width: auto;
+        margin: 40px auto;
+        padding: 32px 42px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .external_calculator {
+        max-width: 600px;
+        width: auto;
+        margin: 40px auto;
+        padding: 32px 42px;
+    }
+
+    .external_calculator_car_lot {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .external_calculator_car_title {
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .external_calculator {
+        padding: 20px;
+    }
+}

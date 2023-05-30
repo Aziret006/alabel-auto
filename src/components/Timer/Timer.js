@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Timer.css'
+import { CircularProgress } from '@mui/material'
 
 const Timer = ({ datetime }) => {
   const [timeRemaining, setTimeRemaining] = useState(null)
@@ -42,14 +43,18 @@ const Timer = ({ datetime }) => {
   }, [datetime])
 
   return (
-    timeRemaining && (
-      <div className="timer_block">
-        <p className="timer">
-          {timeRemaining.days} days {timeRemaining.hours} hours {timeRemaining.minutes} minutes {timeRemaining.seconds}{' '}
-          seconds
-        </p>
-      </div>
-    )
+    <div className="timer_block">
+      <p className="timer">
+        {!timeRemaining ? (
+          <CircularProgress color="orange" size={20} />
+        ) : (
+          <>
+            <span>{timeRemaining.days} days</span> <span>{timeRemaining.hours} hours</span>
+            <span>{timeRemaining.minutes} minutes</span> <span>{timeRemaining.seconds} seconds</span>
+          </>
+        )}
+      </p>
+    </div>
   )
 }
 

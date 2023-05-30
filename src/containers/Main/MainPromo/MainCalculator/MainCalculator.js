@@ -169,7 +169,7 @@ const MainCalculator = () => {
       borderRadius="15px"
       sx={{
         marginTop: { lx: '110px', xl: '100px' },
-        maxWidth: { lx: '380px', xl: '490px' },
+        maxWidth: { xs: '440px', xl: '490px' },
         color: { xs: '#231F1E', lx: '#fff' },
       }}
     >
@@ -190,7 +190,7 @@ const MainCalculator = () => {
         mx="auto"
         fontSize="18px"
         padding="0 30px 20px"
-        sx={{ width: { xs: '280px', lg: '360px', xl: '480px' } }}
+        sx={{ width: { xs: 'auto', lg: '420px', xl: '480px' }, p: { xs: '0 12px 20px', md: '0 30px 20px' } }}
       >
         <Grid item xs={6} pr="18px" sx={{ marginY: { xs: '14px', xl: '20px' } }}>
           <FormControl fullWidth color="orange">
@@ -301,7 +301,7 @@ const MainCalculator = () => {
               sx={{ fontSize: '16px', color: { xs: '#231F1E', lx: '#fff' } }}
               color="orange"
             >
-              Shipping from the port
+              Shipping from the port *
             </InputLabel>
             <Select
               className={classes.mainSelect}
@@ -309,7 +309,7 @@ const MainCalculator = () => {
               id="Shippingfromtheport"
               value={calculateData.port_canada}
               name="port_canada"
-              label="Shipping from the port"
+              label="Shipping from the port *"
               onChange={changeHandler}
             >
               {calculator.fromPorts?.length !== 0 ? (
@@ -331,7 +331,7 @@ const MainCalculator = () => {
               sx={{ fontSize: '16px', color: { xs: '#231F1E', lx: '#fff' } }}
               color="orange"
             >
-              Destination country
+              Destination country *
             </InputLabel>
             <Select
               className={classes.mainSelect}
@@ -339,7 +339,7 @@ const MainCalculator = () => {
               id="Destination"
               value={calculateData.country_destination}
               name="country_destination"
-              label="Destination country"
+              label="Destination country *"
               onChange={changeHandler}
             >
               {calculator.countries?.length !== 0 ? (
@@ -357,7 +357,7 @@ const MainCalculator = () => {
         <Grid item xs={6} sx={{ marginY: { xs: '14px', xl: '20px' } }}>
           <FormControl fullWidth color="orange">
             <InputLabel id="Port-label" sx={{ fontSize: '16px', color: { xs: '#231F1E', lx: '#fff' } }} color="orange">
-              Port of destination
+              Port of destination *
             </InputLabel>
             <Select
               className={classes.mainSelect}
@@ -365,7 +365,7 @@ const MainCalculator = () => {
               id="Port"
               value={calculateData.port_destination}
               name="port_destination"
-              label="Port of destination"
+              label="Port of destination *"
               onChange={changeHandler}
             >
               {calculator.ports?.length !== 0 ? (

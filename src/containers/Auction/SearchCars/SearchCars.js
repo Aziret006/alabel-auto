@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Pagination } from '@mui/material'
+import { useLocation } from 'react-router-dom'
 import Title from '../../../components/UI/Title/Title'
 import SearchBlock from './SearchBlock/SearchBlock'
 import CarCard from '../../../components/CarCard/CarCard'
@@ -17,14 +18,21 @@ const SearchCars = () => {
   const [loader, setLoader] = useState(false)
   const [active, setActive] = useState(false)
 
+  const location = useLocation()
+
   useEffect(() => {
     const getCars = async () => {
       try {
         setLoader(true)
-        const { data } = await axiosApi('/car/list/')
+        const queryParams = new URLSearchParams(location.search)
+        const brandId = queryParams.get('brand')
+        let parsed = ''
+        if (brandId) parsed = parseInt(brandId, 10)
 
-        if (data.count && data.count > 12) {
-          const number = data.count / 12
+        const { data } = await axiosApi(`/car/list/?brand=${parsed}`)
+
+        if (data.count && data.count > 15) {
+          const number = data.count / 15
           setPage(prev => ({
             ...prev,
             lastPage: Math.trunc(number + 1),
@@ -49,7 +57,7 @@ const SearchCars = () => {
     }
 
     getCars().catch()
-  }, [])
+  }, [location.search])
 
   const getData = async (dataSearch, check) => {
     window.scrollTo(0, 0)
@@ -79,8 +87,8 @@ const SearchCars = () => {
         }&priceTo=${dataSearch?.priceTo || ''}${check && `&page=${check}`}`,
       )
 
-      if (data.count && data.count > 12) {
-        const number = data.count / 12
+      if (data.count && data.count > 15) {
+        const number = data.count / 15
         setPage(prev => ({
           ...prev,
           lastPage: Math.trunc(number + 1),
@@ -127,14 +135,15 @@ const SearchCars = () => {
           <span>Search filter</span>
         </div>
         <div className={`cars_left${active ? ' cars_left_active' : ''}`}>
-          <SearchBlock onGetData={getData} />
+          <SearchBlock onGetData={getData} search={location.search} />
         </div>
         <div className="cars_right">
           {loader ? (
-            <Spinner size={250} />
+            <Spinner size={80} />
           ) : (
             <>
               <div className="search_cars">
+                {page.lastPage === 0 && <h2 className="cars_not_found">Cars not found</h2>}
                 {cars?.map(car => (
                   <div key={car.id} className="car">
                     <CarCard car={car} />

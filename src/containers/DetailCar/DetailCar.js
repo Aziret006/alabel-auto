@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import './DetailCar.css'
 import { useParams } from 'react-router-dom'
-import axiosApi from '../../axiosApi'
 import Spinner from '../../components/UI/Spinner/Spinner'
 import CarSlider from './CarSlider/CarSlider'
 import ExternalCalculator from './ExternalCalculator/ExternalCalculator'
+import './DetailCar.css'
+import axiosApi from '../../axiosApi'
 
 const DetailCar = () => {
   const [car, setCar] = useState(null)
@@ -26,13 +26,15 @@ const DetailCar = () => {
     }
 
     getCar().catch()
+
+    window.scrollTo(0, 0)
   }, [params.id])
 
   return (
     <>
       <div className="toolbar" />
       {loader ? (
-        <Spinner size={300} />
+        <Spinner size={120} />
       ) : (
         car && (
           <div className="container">
@@ -76,6 +78,20 @@ const DetailCar = () => {
                     <span>{car.certificate?.drive_unit}</span>
                   </p>
                 )}
+                {car.certificate?.highlights && (
+                  <p key={car.certificate?.highlights} className="characteristics_p">
+                    <span>Highlights:</span>
+                    <span />
+                    <span>{car.certificate?.highlights}</span>
+                  </p>
+                )}
+                {car.certificate?.cylinder && (
+                  <p key={car.certificate?.cylinder} className="characteristics_p">
+                    <span>Cylinder:</span>
+                    <span />
+                    <span>{car.certificate?.cylinder}</span>
+                  </p>
+                )}
                 {car.year && (
                   <p key={car.year} className="characteristics_p">
                     <span>Year:</span>
@@ -109,9 +125,16 @@ const DetailCar = () => {
                 )}
                 {car.certificate?.title_code && (
                   <p key={car.certificate?.title_code} className="characteristics_p">
-                    <span>TITLE cod:</span>
+                    <span>TITLE code:</span>
                     <span />
                     <span>{car.certificate?.title_code}</span>
+                  </p>
+                )}
+                {car.certificate?.title_sale && (
+                  <p key={car.certificate?.title_sale} className="characteristics_p">
+                    <span>TITLE sale:</span>
+                    <span />
+                    <span>{car.certificate?.title_sale}</span>
                   </p>
                 )}
                 {car.certificate?.primary_damage && (
@@ -128,6 +151,20 @@ const DetailCar = () => {
                     <span>{car.certificate?.secondary_damage}</span>
                   </p>
                 )}
+                {car.certificate?.airbags && (
+                  <p key={`1${car.certificate?.airbags}`} className="characteristics_p">
+                    <span>Airbags:</span>
+                    <span />
+                    <span>{car.certificate?.airbags}</span>
+                  </p>
+                )}
+                {car.certificate?.location && (
+                  <p key={`1${car.certificate?.location}`} className="characteristics_p">
+                    <span>Location:</span>
+                    <span />
+                    <span>{car.certificate?.location}</span>
+                  </p>
+                )}
                 {car.certificate?.keys && (
                   <p key={car.certificate?.keys} className="characteristics_p">
                     <span>Keys:</span>
@@ -135,11 +172,11 @@ const DetailCar = () => {
                     <span>{car.certificate?.keys}</span>
                   </p>
                 )}
-                {car.auction && (
-                  <p key={car.auction} className="characteristics_p">
+                {car.auction_title && (
+                  <p key={car.auction_title} className="characteristics_p">
                     <span>Auction:</span>
                     <span />
-                    <span>{car.auction}</span>
+                    <span>{car.auction_title}</span>
                   </p>
                 )}
               </div>

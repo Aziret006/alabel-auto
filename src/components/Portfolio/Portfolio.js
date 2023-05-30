@@ -24,7 +24,7 @@ const Portfolio = () => {
       }
     }
 
-    getCars().catch(e => console.log(e))
+    getCars().catch()
   }, [])
 
   return (

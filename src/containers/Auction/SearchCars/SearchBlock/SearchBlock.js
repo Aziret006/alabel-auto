@@ -65,7 +65,7 @@ const useStyles = makeStyles()(theme => ({
   },
 }))
 
-const SearchBlock = ({ onGetData }) => {
+const SearchBlock = ({ onGetData, search }) => {
   const { classes } = useStyles()
   const [searchData, setSearchData] = useState({
     auctions: [],
@@ -125,6 +125,23 @@ const SearchBlock = ({ onGetData }) => {
       }))
     } catch {}
   }
+
+  useEffect(() => {
+    if (searchData.brands?.length !== 0) {
+      const queryParams = new URLSearchParams(search)
+      const brandId = queryParams.get('brand')
+
+      if (brandId) {
+        const parsed = parseInt(brandId, 10)
+
+        setState(prev => ({
+          ...prev,
+          brand: parsed,
+        }))
+        getModels(parsed).catch()
+      }
+    }
+  }, [search, searchData.brands])
 
   const changeHandler = e => {
     const { name, value } = e.target

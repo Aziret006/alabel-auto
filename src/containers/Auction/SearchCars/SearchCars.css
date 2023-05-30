@@ -61,8 +61,23 @@
     row-gap: 24px;
 }
 
+.cars_not_found {
+    font-size: 44px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 130px auto 0;
+    color: #F47721;
+}
+
 .car {
     width: 32.3%;
+}
+
+@media screen and (max-width: 1440px) {
+    .cars_not_found {
+        font-size: 36px;
+        margin: 130px auto 0;
+    }
 }
 
 @media screen and (max-width: 1080px) {
@@ -92,6 +107,11 @@
     .cars_left {
         height: 0;
         overflow: hidden;
+    }
+
+    .cars_not_found {
+        font-size: 26px;
+        margin: 60px auto 0;
     }
 
     .car {

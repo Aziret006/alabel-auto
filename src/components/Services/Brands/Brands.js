@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Spinner from '../../UI/Spinner/Spinner'
 import axiosApi from '../../../axiosApi'
 
@@ -21,7 +22,7 @@ const Brands = () => {
       }
     }
 
-    getBrands().catch(e => console.log(e))
+    getBrands().catch()
   }, [])
 
   return loader ? (
@@ -29,9 +30,9 @@ const Brands = () => {
   ) : (
     <div className="services_brands">
       {brands?.map(item => (
-        <a key={`brand${item.id}`} href="#">
+        <Link key={`brand${item.id}`} to={`/auction?brand=${item.id}`}>
           <img src={item.image} alt={item.title} />
-        </a>
+        </Link>
       ))}
     </div>
   )

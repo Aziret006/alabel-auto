@@ -35,7 +35,7 @@ const Reviews = () => {
       }
     }
 
-    getReviews().catch(e => console.log(e))
+    getReviews().catch()
   }, [])
 
   return (

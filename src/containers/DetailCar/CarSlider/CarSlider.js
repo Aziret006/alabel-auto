@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { FreeMode, Navigation, Thumbs, Zoom } from 'swiper'
+import { FreeMode, Navigation, Thumbs } from 'swiper'
 
 import './CarSlider.css'
 import 'swiper/swiper-bundle.css'
@@ -14,11 +14,10 @@ const CarSlider = ({ images }) => {
           '--swiper-navigation-color': '#fff',
           '--swiper-pagination-color': '#fff',
         }}
-        zoom
         navigation
         spaceBetween={10}
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[Zoom, FreeMode, Navigation, Thumbs]}
+        modules={[FreeMode, Navigation, Thumbs]}
         className="car_slides"
       >
         {images?.map(item => (

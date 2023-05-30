@@ -54,4 +54,60 @@
     .toolbar {
         min-height: 96px;
     }
+
+    .car_detail {
+        margin-top: 60px;
+    }
+
+    .car_info {
+        width: 48%;
+    }
+
+    .car_info h3 {
+        font-size: 2vw;
+        line-height: 44px;
+        padding-bottom: 5px;
+    }
+
+    .characteristics_p span:first-child {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .characteristics_p span:last-child {
+        font-size: 22px;
+        line-height: 27px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .car_info {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .car_info h3 {
+        display: block;
+        font-size: 24px;
+        text-align: center;
+        width: 360px;
+        margin: 0 auto 10px;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .car_detail {
+        margin-top: 38px;
+    }
+
+    .characteristics_p span:first-child {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .characteristics_p span:last-child {
+        font-size: 15px;
+        line-height: 18px;
+    }
 }
