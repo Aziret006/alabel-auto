@@ -29,6 +29,24 @@ const useStyles = makeStyles()(theme => ({
     background: '#fff',
     padding: '60px',
     borderRadius: '5px',
+    maxHeight: '960px',
+    overflowY: 'auto',
+    '&::-webkit-scrollbar': {
+      width: '10px',
+      backgroundColor: '#ded5d5',
+      borderRadius: '5px',
+    },
+    '&::-webkit-scrollbar-track': {
+      boxShadow: 'inset 0 0 6px rgba(0,0,0,0.00)',
+      webkitBoxShadow: 'inset 0 0 6px rgba(0,0,0,0.00)',
+    },
+    '&::-webkit-scrollbar-thumb': {
+      backgroundColor: '#F47721',
+      borderRadius: '5px',
+    },
+    [theme.breakpoints.down('xl')]: {
+      padding: '30px 26px',
+    },
     [theme.breakpoints.down('md')]: {
       width: '96%',
       padding: '20px 16px',
@@ -208,7 +226,7 @@ const ModalCalculator = props => {
         >
           calculator
         </Typography>
-        <Grid container justifyContent="space-between" fontSize="18px" sx={{ gap: { xs: '0', md: '30px' } }}>
+        <Grid container justifyContent="space-between" fontSize="18px" sx={{ gap: { xs: '0', xl: '30px' } }}>
           <Grid
             item
             xs={12}
