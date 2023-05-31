@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Navigation, Thumbs } from 'swiper'
+import Fancybox from '../../../components/Fancybox/Fancybox'
 
 import './CarSlider.css'
 import 'swiper/swiper-bundle.css'
-import Fancybox from '../../../components/Fancybox/Fancybox'
 
 const CarSlider = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null)
