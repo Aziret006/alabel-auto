@@ -67,7 +67,7 @@ const ModalCalculator = props => {
     service_auto_canada: props.calculatorCar.service_auto_canada,
     car_cost: props.calculatorCar.car_price,
     auction_fee: props.calculatorCar.auction_fee,
-    canada_sales_tax: props.calculatorCar.canada_sales_tax,
+    canada_sales_tax: props.calculatorCar.canada_sales_tax || 0,
     transportation: props.calculatorCar.transportation,
     container_insurance: 0,
     last_insurance: 0,
@@ -127,7 +127,7 @@ const ModalCalculator = props => {
             car_cost: data.car_price,
             auction_fee: data.auction_fee,
             transportation: data.transportation,
-            canada_sales_tax: data.canada_sales_tax,
+            canada_sales_tax: data.canada_sales_tax || 0,
             last_insurance: data.container_insurance,
           }))
         }

@@ -301,7 +301,10 @@ const MainCalculator = () => {
               sx={{ fontSize: '16px', color: { xs: '#231F1E', lx: '#fff' } }}
               color="orange"
             >
-              Shipping from the port *
+              Shipping from the port{' '}
+              <Typography variant="span" color="red">
+                *
+              </Typography>
             </InputLabel>
             <Select
               className={classes.mainSelect}
@@ -331,7 +334,10 @@ const MainCalculator = () => {
               sx={{ fontSize: '16px', color: { xs: '#231F1E', lx: '#fff' } }}
               color="orange"
             >
-              Destination country *
+              Destination country{' '}
+              <Typography variant="span" color="red">
+                *
+              </Typography>
             </InputLabel>
             <Select
               className={classes.mainSelect}
@@ -357,7 +363,10 @@ const MainCalculator = () => {
         <Grid item xs={6} sx={{ marginY: { xs: '14px', xl: '20px' } }}>
           <FormControl fullWidth color="orange">
             <InputLabel id="Port-label" sx={{ fontSize: '16px', color: { xs: '#231F1E', lx: '#fff' } }} color="orange">
-              Port of destination *
+              Port of destination{' '}
+              <Typography variant="span" color="red">
+                *
+              </Typography>
             </InputLabel>
             <Select
               className={classes.mainSelect}
