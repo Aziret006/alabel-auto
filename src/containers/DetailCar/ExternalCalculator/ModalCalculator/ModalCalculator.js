@@ -14,7 +14,6 @@ import {
   TextField,
   Typography,
 } from '@mui/material'
-import RemoveIcon from '@mui/icons-material/Remove'
 import { makeStyles } from 'tss-react/mui'
 import axiosApi from '../../../../axiosApi'
 
@@ -65,9 +64,13 @@ const useStyles = makeStyles()(theme => ({
     position: 'absolute',
     right: '60px',
     top: '55px',
+    [theme.breakpoints.down('xl')]: {
+      top: '26px',
+      right: '26px',
+    },
     [theme.breakpoints.down('md')]: {
-      top: '16px',
-      right: '16px',
+      top: '10px',
+      right: '10px',
     },
   },
 }))
@@ -212,7 +215,12 @@ const ModalCalculator = props => {
     <Modal open={props.modal} onClose={props.handlerModal}>
       <Box component="form" className={classes.modal}>
         <IconButton className={classes.close} onClick={props.handlerModal}>
-          <RemoveIcon fontSize="large" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30px" fill="none">
+            <path
+              fill="#231F1E"
+              d="M1.042 28.958c.416.417.833.625 1.458.625s1.042-.208 1.458-.625L15 17.917 26.04 28.958c.417.417 1.042.625 1.459.625.416 0 1.041-.208 1.458-.625.834-.833.834-2.083 0-2.916L17.917 15 28.957 3.958c.834-.833.834-2.083 0-2.916-.833-.834-2.083-.834-2.916 0L15 12.083 3.958 1.042c-.833-.834-2.083-.834-2.917 0-.833.833-.833 2.083 0 2.916L12.084 15 1.041 26.042c-.833.833-.833 2.083 0 2.916Z"
+            />
+          </svg>
         </IconButton>
         <Typography
           variant="h3"
