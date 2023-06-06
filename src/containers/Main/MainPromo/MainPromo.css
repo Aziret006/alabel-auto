@@ -163,7 +163,7 @@
     }
 
     .main_promo_in_carousel {
-        width: 70%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -181,10 +181,6 @@
 
     .main_promo_line {
         display: none;
-    }
-
-    .main_promo_in_carousel {
-        width: 320px;
     }
 
     .main_promo_smoke {

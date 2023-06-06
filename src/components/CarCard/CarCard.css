@@ -20,7 +20,7 @@
     background: #FFFFFF;
 }
 
-.car_card_second_first, .car_card_second_line, .car_card_third_line {
+.car_card_second_line, .car_card_third_line {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +28,6 @@
 }
 
 .car_title {
-    width: 50%;
     margin: 0;
     font-weight: 500;
     font-size: 22px;
@@ -40,7 +39,6 @@
 }
 
 .car_lot {
-    width: 40%;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
@@ -54,7 +52,6 @@
 }
 
 .car_card_text p {
-    max-width: 300px;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;

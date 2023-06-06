@@ -1,11 +1,7 @@
-.search_title {
-    max-width: 740px;
-    margin: 95px auto 74px;
-}
-
 .cars_block {
     display: flex;
     justify-content: space-between;
+    margin-top: 95px !important;
 }
 
 .filter_menu {
@@ -70,7 +66,12 @@
 }
 
 .car {
-    width: 32.3%;
+    width: 46%;
+}
+
+.car .car_card_image {
+    height: 280px;
+    max-width: 500px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -90,14 +91,22 @@
         width: 100%;
     }
 
+    .search_cars {
+        justify-content: space-between;
+    }
+
     .cars_left {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 720px) {
+    .cars_block {
+        margin-top: 65px !important;
+    }
+
     .search_cars {
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .filter_menu {
@@ -115,16 +124,11 @@
     }
 
     .car {
-        width: 48%;
-    }
-}
-
-@media screen and (max-width: 520px) {
-    .search_cars {
-        justify-content: center;
+        width: 95%;
     }
 
-    .car {
-        width: max-content;
+    .car .car_card {
+        max-width: 480px;
+        margin: 0 auto;
     }
 }

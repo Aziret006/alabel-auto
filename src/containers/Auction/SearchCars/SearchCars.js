@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Pagination } from '@mui/material'
 import { useLocation } from 'react-router-dom'
-import Title from '../../../components/UI/Title/Title'
 import SearchBlock from './SearchBlock/SearchBlock'
 import CarCard from '../../../components/CarCard/CarCard'
 import Spinner from '../../../components/UI/Spinner/Spinner'
@@ -60,7 +59,7 @@ const SearchCars = () => {
   }, [location.search])
 
   const getData = async (dataSearch, check) => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 590)
     setSearchData(dataSearch)
     if (!check) {
       check = ''
@@ -126,38 +125,33 @@ const SearchCars = () => {
   }
 
   return (
-    <>
-      <div className="search_title">
-        <Title title="Steps to buy a car from Canada" />
+    <div className="container cars_block">
+      <div className={`filter_menu${active ? ' filter_menu_active' : ''}`} onClick={onShowFilter}>
+        <span>Search filter</span>
       </div>
-      <div className="container cars_block">
-        <div className={`filter_menu${active ? ' filter_menu_active' : ''}`} onClick={onShowFilter}>
-          <span>Search filter</span>
-        </div>
-        <div className={`cars_left${active ? ' cars_left_active' : ''}`}>
-          <SearchBlock onGetData={getData} search={location.search} />
-        </div>
-        <div className="cars_right">
-          {loader ? (
-            <Spinner size={80} />
-          ) : (
-            <>
-              <div className="search_cars">
-                {page.lastPage === 0 && <h2 className="cars_not_found">Cars not found</h2>}
-                {cars?.map(car => (
-                  <div key={car.id} className="car">
-                    <CarCard car={car} />
-                  </div>
-                ))}
-              </div>
-              <Box width="max-content" m="20px auto">
-                <Pagination count={page.lastPage} page={page.currentPage} onChange={onChange} />
-              </Box>
-            </>
-          )}
-        </div>
+      <div className={`cars_left${active ? ' cars_left_active' : ''}`}>
+        <SearchBlock onGetData={getData} search={location.search} />
       </div>
-    </>
+      <div className="cars_right">
+        {loader ? (
+          <Spinner size={80} />
+        ) : (
+          <>
+            <div className="search_cars">
+              {page.lastPage === 0 && <h2 className="cars_not_found">Cars not found</h2>}
+              {cars?.map(car => (
+                <div key={car.id} className="car">
+                  <CarCard car={car} />
+                </div>
+              ))}
+            </div>
+            <Box width="max-content" m="20px auto">
+              <Pagination count={page.lastPage} page={page.currentPage} onChange={onChange} />
+            </Box>
+          </>
+        )}
+      </div>
+    </div>
   )
 }
 

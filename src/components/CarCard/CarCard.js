@@ -21,11 +21,9 @@ const CarCard = ({ car }) => {
         <img src={car.image || notImage} alt="brand" />
       </div>
       <div className="car_card_text">
-        <p className="car_card_second_first">
-          <span className="car_title">{car.brand}</span>
-          <span className="car_lot">
-            Lot: <span>{car.vehicle_id}</span>
-          </span>
+        <p className="car_title">{car.brand}</p>
+        <p className="car_lot">
+          Lot: <span>{car.vehicle_id}</span>
         </p>
         <p className="car_card_second_line">
           <span>{car.auction_date}</span>
