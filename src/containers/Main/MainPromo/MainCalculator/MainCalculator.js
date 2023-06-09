@@ -16,14 +16,17 @@ import axiosApi from '../../../../axiosApi'
 
 const useStyles = makeStyles()(theme => ({
   mainInput: {
+    '.css-144wcdf-MuiFormLabel-root-MuiInputLabel-root': {
+      fontSize: '1.1rem',
+    },
+    '.css-14lo706': {
+      fontSize: '1rem',
+    },
     '& label': {
       color: 'white',
       [theme.breakpoints.down('lx')]: {
         color: '#231F1E',
       },
-    },
-    '& .Mui-focused': {
-      fontSize: '16px',
     },
     '& input': {
       color: '#fff',
@@ -196,7 +199,7 @@ const MainCalculator = () => {
           <FormControl fullWidth color="orange">
             <InputLabel
               id="select-label"
-              sx={{ fontSize: '16px', color: { xs: '#231F1E', lx: '#fff' } }}
+              sx={{ fontSize: '1.1rem', color: { xs: '#231F1E', lx: '#fff' } }}
               color="orange"
             >
               Choose an auction
@@ -224,7 +227,11 @@ const MainCalculator = () => {
         </Grid>
         <Grid item xs={6} sx={{ marginY: { xs: '14px', xl: '20px' } }}>
           <FormControl fullWidth color="orange">
-            <InputLabel id="body-label" sx={{ fontSize: '16px', color: { xs: '#231F1E', lx: '#fff' } }} color="orange">
+            <InputLabel
+              id="body-label"
+              sx={{ fontSize: '1.1rem', color: { xs: '#231F1E', lx: '#fff' } }}
+              color="orange"
+            >
               Body
             </InputLabel>
             <Select
@@ -252,7 +259,7 @@ const MainCalculator = () => {
           <FormControl fullWidth color="orange">
             <InputLabel
               id="location-label"
-              sx={{ fontSize: '16px', color: { xs: '#231F1E', lx: '#fff' } }}
+              sx={{ fontSize: '1.1rem', color: { xs: '#231F1E', lx: '#fff' } }}
               color="orange"
             >
               Location
@@ -285,7 +292,7 @@ const MainCalculator = () => {
         <Grid item xs={6} pr="18px" sx={{ marginY: { xs: '14px', xl: '20px' } }}>
           <TextField
             className={classes.mainInput}
-            label="Car price in Canada/USA"
+            label="Car price in Canada"
             type="number"
             fullWidth
             color="orange"
@@ -298,7 +305,7 @@ const MainCalculator = () => {
           <FormControl fullWidth color="orange">
             <InputLabel
               id="Shippingfromtheport-label"
-              sx={{ fontSize: '16px', color: { xs: '#231F1E', lx: '#fff' } }}
+              sx={{ fontSize: '1.1rem', color: { xs: '#231F1E', lx: '#fff' } }}
               color="orange"
             >
               Shipping from the port{' '}
@@ -331,7 +338,7 @@ const MainCalculator = () => {
           <FormControl fullWidth color="orange">
             <InputLabel
               id="Destination-label"
-              sx={{ fontSize: '16px', color: { xs: '#231F1E', lx: '#fff' } }}
+              sx={{ fontSize: '1.1rem', color: { xs: '#231F1E', lx: '#fff' } }}
               color="orange"
             >
               Destination country{' '}
@@ -362,7 +369,11 @@ const MainCalculator = () => {
         </Grid>
         <Grid item xs={6} sx={{ marginY: { xs: '14px', xl: '20px' } }}>
           <FormControl fullWidth color="orange">
-            <InputLabel id="Port-label" sx={{ fontSize: '16px', color: { xs: '#231F1E', lx: '#fff' } }} color="orange">
+            <InputLabel
+              id="Port-label"
+              sx={{ fontSize: '1.1rem', color: { xs: '#231F1E', lx: '#fff' } }}
+              color="orange"
+            >
               Port of destination{' '}
               <Typography variant="span" color="red">
                 *

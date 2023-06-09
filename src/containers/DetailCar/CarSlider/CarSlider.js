@@ -10,7 +10,7 @@ const CarSlider = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null)
   return (
     <div className="car_slider">
-      <Fancybox options={{ infinite: false, zoom: true }}>
+      <Fancybox options={{ infinite: false, zoom: false }}>
         <Swiper
           style={{
             '--swiper-navigation-color': '#fff',
@@ -24,7 +24,7 @@ const CarSlider = ({ images }) => {
         >
           {images?.map(item => (
             <SwiperSlide key={item.id}>
-              <div data-fancybox="gallery" data-src={item.image} className="swiper-zoom-container">
+              <div data-fancybox="gallery" data-src={item.image}>
                 <img src={item.image} alt="Car" />
               </div>
             </SwiperSlide>

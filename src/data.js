@@ -13,6 +13,24 @@ export const years = [
   2019, 2020, 2021, 2022, 2023,
 ]
 
+export const mileages = [
+  '0 - 25000',
+  '25000 - 50000',
+  '50000 - 75000',
+  '75000 - 100000',
+  '100000 - 150000',
+  '150000 - 200000',
+  '200000 <',
+]
+
+export const fuelType = ['Flexible Fuel', 'Diesel', 'Gasoline', 'Hybrid', 'Electric', 'PlugInHybrid', 'Other']
+
+export const transmission = ['AUTOMATIC', 'MANUAL']
+
+export const sortDateAuction = ['near', 'late']
+
+export const sortYearMade = ['new', 'old']
+
 export const mainAdvantages = [
   { img: percent, title: 'Lower prices due to favorable exchange rate' },
   { img: earth, title: 'Straightforward export process with help from a reliable company' },

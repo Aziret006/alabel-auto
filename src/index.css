@@ -109,6 +109,10 @@ input[type="number"] {
     cursor: wait;
 }
 
+.fancybox__content img {
+    transform: scale(1.6);
+}
+
 @media screen and (max-width: 1080px) {
     .calculator_btn {
         color: #FFFFFF;

@@ -6,6 +6,15 @@ import ExternalCalculator from './ExternalCalculator/ExternalCalculator'
 import './DetailCar.css'
 import axiosApi from '../../axiosApi'
 
+import Mileage from '../../assets/icons/mileage.svg'
+import FuelType from '../../assets/icons/fuel.svg'
+import Volume from '../../assets/icons/volume.svg'
+import Transmission from '../../assets/icons/transmission.svg'
+import Drive from '../../assets/icons/drive.svg'
+import Year from '../../assets/icons/year.svg'
+import Body from '../../assets/icons/body.svg'
+import Color from '../../assets/icons/color.svg'
+
 const DetailCar = () => {
   const [car, setCar] = useState(null)
   const [loader, setLoader] = useState(false)
@@ -43,79 +52,81 @@ const DetailCar = () => {
               <ExternalCalculator car={car} />
               <div className="car_info">
                 <h3>Vehicle Information</h3>
-                {car.mileage && (
-                  <p key={car.mileage} className="characteristics_p">
-                    <span>Mileage:</span>
-                    <span />
-                    <span>{car.mileage}</span>
-                  </p>
-                )}
-                {car.fuel && (
-                  <p key={car.fuel} className="characteristics_p">
-                    <span>Fuel type::</span>
-                    <span />
-                    <span>{car.fuel}</span>
-                  </p>
-                )}
-                {car.engine && (
-                  <p key={car.engine} className="characteristics_p">
-                    <span>Engine:</span>
-                    <span />
-                    <span>{car.engine}</span>
-                  </p>
-                )}
-                {car.transmission && (
-                  <p key={car.transmission} className="characteristics_p">
-                    <span>Transmission:</span>
-                    <span />
-                    <span>{car.transmission}</span>
-                  </p>
-                )}
-                {car.certificate?.drive_unit && (
-                  <p key={car.certificate?.drive_unit} className="characteristics_p">
-                    <span>Drive unit:</span>
-                    <span />
-                    <span>{car.certificate?.drive_unit}</span>
-                  </p>
-                )}
-                {car.certificate?.highlights && (
-                  <p key={car.certificate?.highlights} className="characteristics_p">
-                    <span>Highlights:</span>
-                    <span />
-                    <span>{car.certificate?.highlights}</span>
-                  </p>
-                )}
-                {car.certificate?.cylinder && (
-                  <p key={car.certificate?.cylinder} className="characteristics_p">
-                    <span>Cylinder:</span>
-                    <span />
-                    <span>{car.certificate?.cylinder}</span>
-                  </p>
-                )}
-                {car.year && (
-                  <p key={car.year} className="characteristics_p">
-                    <span>Year:</span>
-                    <span />
-                    <span>{car.year}</span>
-                  </p>
-                )}
-                {car.color && (
-                  <p key={car.color} className="characteristics_p">
-                    <span>Color:</span>
-                    <span />
-                    <span>{car.color}</span>
-                  </p>
-                )}
-                {car.body && (
-                  <p key={car.body} className="characteristics_p">
-                    <span>Body:</span>
-                    <span />
-                    <span>{car.body}</span>
-                  </p>
-                )}
+                <div className="info_block">
+                  {car.mileage && (
+                    <p key={car.mileage}>
+                      <img src={Mileage} alt="" />
+                      <span>Mileage: </span>
+                      <span>{car.mileage}</span>
+                    </p>
+                  )}
+                  {car.fuel && (
+                    <p key={car.fuel}>
+                      <img src={FuelType} alt="" />
+                      <span>Fuel type: </span>
+                      <span>{car.fuel}</span>
+                    </p>
+                  )}
+                  {car.engine && (
+                    <p key={car.engine}>
+                      <img src={Volume} alt="" />
+                      <span>Engine: </span>
+                      <span>{car.engine}</span>
+                    </p>
+                  )}
+                  {car.transmission && (
+                    <p key={car.transmission}>
+                      <img src={Transmission} alt="" />
+                      <span>Transmission: </span>
+                      <span>{car.transmission}</span>
+                    </p>
+                  )}
+                  {car.certificate?.drive_unit && (
+                    <p key={car.certificate?.drive_unit}>
+                      <img src={Drive} alt="" />
+                      <span>Drive unit: </span>
+                      <span>{car.certificate?.drive_unit}</span>
+                    </p>
+                  )}
+                  {car.certificate?.highlights && (
+                    <p key={car.certificate?.highlights}>
+                      <img src={FuelType} alt="" />
+                      <span>Highlights: </span>
+                      <span>{car.certificate?.highlights}</span>
+                    </p>
+                  )}
+                  {car.certificate?.cylinder && (
+                    <p key={car.certificate?.cylinder}>
+                      <img src={FuelType} alt="" />
+                      <span>Cylinder: </span>
+                      <span>{car.certificate?.cylinder}</span>
+                    </p>
+                  )}
+                  {car.year && (
+                    <p key={car.year}>
+                      <img src={Year} alt="" />
+                      <span>Year: </span>
+                      <span>{car.year}</span>
+                    </p>
+                  )}
+                  {car.color && (
+                    <p key={car.color}>
+                      <img src={Color} alt="" />
+                      <span>Color: </span>
+                      <span>{car.color}</span>
+                    </p>
+                  )}
+                  {car.body && (
+                    <p key={car.body}>
+                      <img src={Body} alt="" />
+                      <span>Body: </span>
+                      <span>{car.body}</span>
+                    </p>
+                  )}
+                </div>
               </div>
-              <div className="car_info">
-                <h3>Venhele Registration Certificate</h3>
+              <div className="car_info second_block">
+                <h3>Sale information</h3>
                 {car.certificate?.VIN && (
                   <p key={car.certificate?.VIN} className="characteristics_p">
                     <span>VIN:</span>

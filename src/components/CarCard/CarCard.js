@@ -27,7 +27,6 @@ const CarCard = ({ car }) => {
         </p>
         <p className="car_card_second_line">
           <span>{car.auction_date}</span>
-          <span>{car.highlights}</span>
         </p>
         <p className="car_card_third_line">
           <span className="card_price">

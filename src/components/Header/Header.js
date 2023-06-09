@@ -25,7 +25,7 @@ const Header = () => {
                 </div>
                 <div className="menu_info_block">
                   <p className="menu_info_jps">Main Office</p>
-                  <span>3525 North Harlem Avenue</span>
+                  <span>1600-2300 YONGE ST TORONTO ON M4P 1E4 CANADA</span>
                 </div>
               </div>
             </div>

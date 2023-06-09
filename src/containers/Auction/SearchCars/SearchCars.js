@@ -76,6 +76,16 @@ const SearchCars = () => {
       )
     }
 
+    let mileageFrom = ''
+    let mileageTo = ''
+
+    if (dataSearch.mileage) {
+      const array = dataSearch.mileage.split('-')
+
+      mileageFrom = array[0]?.replace(/ /g, '').replace(/</g, '') || ''
+      mileageTo = array[1]?.replace(/</g, '') || ''
+    }
+
     try {
       setLoader(true)
       const { data } = await axiosApi(
@@ -83,7 +93,13 @@ const SearchCars = () => {
           dataSearch?.model || ''
         }&min_year=${dataSearch?.min_year || ''}&max_year=${dataSearch?.max_year || ''}&priceFrom=${
           dataSearch?.priceFrom || ''
-        }&priceTo=${dataSearch?.priceTo || ''}${check && `&page=${check}`}`,
+        }&priceTo=${dataSearch?.priceTo || ''}${
+          check && `&page=${check}`
+        }&mileage_from=${mileageFrom}&mileage_to=${mileageTo}&color_f=${dataSearch.color}&fuel_type=${
+          dataSearch.fuel_type
+        }&transmission=${dataSearch.transmission}&location=${dataSearch.location}&sort_date=${
+          dataSearch.sort_date
+        }&sort_year=${dataSearch.sort_year}`,
       )
 
       if (data.count && data.count > 15) {
@@ -108,6 +124,11 @@ const SearchCars = () => {
       setLoader(false)
     } catch {
       setLoader(false)
+      setPage(prev => ({
+        ...prev,
+        lastPage: 0,
+      }))
+      setCars([])
     }
   }
 

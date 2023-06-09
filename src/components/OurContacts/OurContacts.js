@@ -13,14 +13,17 @@ const OurContacts = ({ classes }) => (
       <div className="our_contacts_left">
         <div>
           <p className="contacts_title contacts_email">E-mail</p>
-          <a className="contacts_text" href="mailto:autokanada@gmail.com">
-            autokanada@gmail.com
+          <a className="contacts_text" href="mailto:carnadamotors@gmail.com">
+            carnadamotors@gmail.com
           </a>
         </div>
         <div>
           <p className="contacts_title contacts_phone">Phone</p>
           <a className="contacts_text" href={`tel:${+14316888484}`}>
-            +1 431 688 84 84
+            +1 431 688 8484
+          </a>
+          <a className="contacts_text" href={`tel:${+13435006677}`}>
+            +1 343 500 6677
           </a>
         </div>
         <div>
@@ -30,8 +33,8 @@ const OurContacts = ({ classes }) => (
         </div>
         <div>
           <p className="contacts_title contacts_jps">Main Office</p>
-          <p className="contacts_text">3525 North Harlem Avenue</p>
-          <p className="contacts_text">Canada, IL, 6034</p>
+          <p className="contacts_text">1600-2300 YONGE ST TORONTO</p>
+          <p className="contacts_text">ON M4P 1E4 CANADA</p>
         </div>
       </div>
       <div className="our_contacts_right">
