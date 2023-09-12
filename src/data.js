@@ -32,14 +32,16 @@ export const sortDateAuction = ['near', 'late']
 export const sortYearMade = ['new', 'old']
 
 export const mainAdvantages = [
-  { img: percent, title: 'Lower prices due to favorable exchange rate' },
-  { img: earth, title: 'Straightforward export process with help from a reliable company' },
-  { img: medal, title: 'High-quality vehicles known for durability and equipped with unique features' },
+  { img: percent, title: 'Attractive prices' },
+  { img: earth, title: 'Less competition, more opportunities' },
+  { img: medal, title: 'Transparent vehicle history' },
   {
     img: box,
-    title: 'Great condition due to strict safety and emission standards.',
+    title: 'Measurements in kilometers and liters',
   },
-  { img: like, title: 'Wide selection of used cars, including luxury and economy models' },
+  { img: like, title: 'High quality and safety' },
+  { img: medal, title: 'Are you buying for export? We will cover 100% of all taxes!' },
+  { img: earth, title: 'Reliability and transparency.' },
 ]
 
 export const processData = [

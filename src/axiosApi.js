@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiosApi = axios.create({
-  baseURL: 'http://176.119.147.135',
+  baseURL: 'https://api.autocanada24.ca',
 })
 
 export default axiosApi

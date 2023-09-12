@@ -36,7 +36,7 @@
     max-width: 600px;
     margin-left: auto;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 200%;
     color: #FFFFFF;
 }
@@ -64,7 +64,7 @@
     }
 
     .main_advantages_left p {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .main_advantages_right {
