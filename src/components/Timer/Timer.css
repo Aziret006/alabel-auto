@@ -1,35 +1,35 @@
 .timer {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: #F47721;
-    background: #FFFFFF;
-    border: 1px solid #CBCBCB;
-    border-radius: 3px;
-    padding: 16px 14px;
-    margin: 0 0 10px;
-    display: flex;
-    justify-content: space-around;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #f47721;
+  background: #ffffff;
+  border: 1px solid #cbcbcb;
+  border-radius: 3px;
+  padding: 16px 14px;
+  margin: 0 0 10px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .timer span {
-    margin-right: 6px;
+  margin-right: 6px;
 }
 
 .timer span:last-child {
-    margin: 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 1440px) {
-    .timer {
-        font-size: 16px;
-        line-height: 22px;
-    }
+  .timer {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 @media screen and (max-width: 720px) {
-    .timer {
-        font-size: 12px;
-        line-height: 17px;
-    }
+  .timer {
+    font-size: 12px;
+    line-height: 17px;
+  }
 }

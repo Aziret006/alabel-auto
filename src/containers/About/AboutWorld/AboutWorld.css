@@ -1,30 +1,30 @@
 .about_world_title {
-    max-width: 1420px;
-    margin: 250px auto 65px;
+  max-width: 1420px;
+  margin: 250px auto 65px;
 }
 
 .about_world_title h3 {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .about_world img {
-    width: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 1440px) {
-    .about_world_title {
-        max-width: 1290px;
-        margin: 230px auto 45px;
-    }
+  .about_world_title {
+    max-width: 1290px;
+    margin: 230px auto 45px;
+  }
 }
 
 @media screen and (max-width: 720px) {
-    .about_world_title {
-        max-width: 1290px;
-        margin: 100px auto 12px;
-    }
+  .about_world_title {
+    max-width: 1290px;
+    margin: 100px auto 12px;
+  }
 
-    .about_world_title h3 {
-        margin-bottom: 20px;
-    }
+  .about_world_title h3 {
+    margin-bottom: 20px;
+  }
 }

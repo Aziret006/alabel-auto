@@ -1,76 +1,76 @@
 .services_card {
-    position: relative;
-    max-width: 252px;
-    box-shadow: 0 1px 10px rgba(35, 31, 30, 0.09);
-    border-radius: 5px;
-    padding: 90px 56px 82px;
-    margin-bottom: 40px;
+  position: relative;
+  max-width: 252px;
+  box-shadow: 0 1px 10px rgba(35, 31, 30, 0.09);
+  border-radius: 5px;
+  padding: 90px 56px 82px;
+  margin-bottom: 40px;
 }
 
 .services_card img {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
 }
 
 .services_card h5 {
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 44px;
-    text-align: center;
-    margin: 20px 0;
-    transition: color 0.5s ease;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  margin: 20px 0;
+  transition: color 0.5s ease;
 }
 
 .services_card:hover h5 {
-    color: #F47721;
+  color: #f47721;
 }
 
 .services_card p {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 185%;
-    text-align: center;
-    color: #636262;
-    margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 185%;
+  text-align: center;
+  color: #636262;
+  margin: 0;
 }
 
 @media screen and (max-width: 1440px) {
-    .services_card {
-        max-width: 200px;
-        padding: 67px 46px 76px;
-    }
+  .services_card {
+    max-width: 200px;
+    padding: 67px 46px 76px;
+  }
 
-    .services_card img {
-        width: 60px;
-    }
+  .services_card img {
+    width: 60px;
+  }
 
-    .services_card h5 {
-        font-size: 28px;
-        line-height: 34px;
-    }
+  .services_card h5 {
+    font-size: 28px;
+    line-height: 34px;
+  }
 
-    .services_card p {
-        font-size: 15px;
-    }
+  .services_card p {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 720px) {
-    .services_card {
-        padding: 40px 34px 43px;
-    }
+  .services_card {
+    padding: 40px 34px 43px;
+  }
 
-    .services_card img {
-        width: 50px;
-    }
+  .services_card img {
+    width: 50px;
+  }
 
-    .services_card h5 {
-        font-size: 24px;
-        line-height: 29px;
-    }
+  .services_card h5 {
+    font-size: 24px;
+    line-height: 29px;
+  }
 
-    .services_card p {
-        font-size: 14px;
-    }
+  .services_card p {
+    font-size: 14px;
+  }
 }

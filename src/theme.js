@@ -1,13 +1,13 @@
-import { createTheme } from '@mui/material/styles'
+import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   components: {
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          '&:hover': {
-            '.MuiOutlinedInput-notchedOutline': {
-              borderColor: '#F47721',
+          "&:hover": {
+            ".MuiOutlinedInput-notchedOutline": {
+              borderColor: "#F47721",
             },
           },
         },
@@ -15,7 +15,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ['Montserrat', 'sans-serif'],
+    fontFamily: ["Montserrat", "sans-serif"],
   },
   breakpoints: {
     values: {
@@ -29,12 +29,12 @@ const theme = createTheme({
   },
   palette: {
     white: {
-      main: '#fff',
+      main: "#fff",
     },
     orange: {
-      main: '#F47721',
+      main: "#F47721",
     },
   },
-})
+});
 
-export default theme
+export default theme;

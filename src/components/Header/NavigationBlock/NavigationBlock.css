@@ -1,57 +1,57 @@
 .nav {
-    max-width: 820px;
+  max-width: 820px;
 }
 
 .nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav ul li {
-    display: inline-block;
-    margin-right: 60px;
+  display: inline-block;
+  margin-right: 60px;
 }
 
 .nav ul li:last-child {
-    margin-right: 0 !important;
+  margin-right: 0 !important;
 }
 
 @media screen and (max-width: 1440px) {
-    .nav ul li {
-        margin-right: 30px;
-    }
+  .nav ul li {
+    margin-right: 30px;
+  }
 }
 
 @media screen and (max-width: 1080px) {
-    body {
-        overflow-x: hidden;
-    }
+  body {
+    overflow-x: hidden;
+  }
 
-    .nav {
-        display: none;
-        margin-left: 0;
-    }
+  .nav {
+    display: none;
+    margin-left: 0;
+  }
 
-    .nav.nav_active {
-        display: block;
-    }
+  .nav.nav_active {
+    display: block;
+  }
 
-    .nav ul {
-        display: flex;
-        flex-direction: column;
-        margin-top: 40px;
-        margin-left: 15px;
-    }
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 15px;
+  }
 
-    .nav ul li {
-        width: 100%;
-        margin-bottom: 44px;
-    }
+  .nav ul li {
+    width: 100%;
+    margin-bottom: 44px;
+  }
 }
 
 @media screen and (max-width: 520px) {
-    .nav ul li {
-        margin-bottom: 30px;
-    }
+  .nav ul li {
+    margin-bottom: 30px;
+  }
 }

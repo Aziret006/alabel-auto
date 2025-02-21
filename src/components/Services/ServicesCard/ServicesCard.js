@@ -1,5 +1,5 @@
-import React from 'react'
-import './ServicesCard.css'
+import React from "react";
+import "./ServicesCard.css";
 
 const ServicesCard = ({ item }) => (
   <div className="services_card">
@@ -7,6 +7,6 @@ const ServicesCard = ({ item }) => (
     <h5>{item.title}</h5>
     <p>{item.description}</p>
   </div>
-)
+);
 
-export default ServicesCard
+export default ServicesCard;

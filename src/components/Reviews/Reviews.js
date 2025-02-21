@@ -1,42 +1,42 @@
-import React, { useEffect, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { FreeMode, Pagination } from 'swiper'
-import UpTitle from '../UI/UpTitle/UpTitle'
-import Title from '../UI/Title/Title'
-import SubTitle from '../UI/SubTitle/SubTitle'
-import Spinner from '../UI/Spinner/Spinner'
-import 'swiper/swiper-bundle.css'
-import './Reviews.css'
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Pagination } from "swiper";
+import UpTitle from "../UI/UpTitle/UpTitle";
+import Title from "../UI/Title/Title";
+import SubTitle from "../UI/SubTitle/SubTitle";
+import Spinner from "../UI/Spinner/Spinner";
+import "swiper/swiper-bundle.css";
+import "./Reviews.css";
 
-import axiosApi from '../../axiosApi'
-import avatar from '../../assets/images/avatar.jpg'
+import axiosApi from "../../axiosApi";
+import avatar from "../../assets/images/avatar.jpg";
 
 const Reviews = () => {
-  const [reviews, setReviews] = useState([])
-  const [width, setWidth] = useState(3)
-  const [loader, setLoader] = useState(false)
+  const [reviews, setReviews] = useState([]);
+  const [width, setWidth] = useState(3);
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth < 1280) {
-      setWidth(1)
+      setWidth(1);
     }
 
     const getReviews = async () => {
       try {
-        setLoader(true)
-        const { data } = await axiosApi('/car/review/')
+        setLoader(true);
+        const { data } = await axiosApi("/car/review/");
 
         if (data) {
-          setReviews(data)
+          setReviews(data);
         }
-        setLoader(false)
+        setLoader(false);
       } catch {
-        setLoader(false)
+        setLoader(false);
       }
-    }
+    };
 
-    getReviews().catch()
-  }, [])
+    getReviews().catch();
+  }, []);
 
   return (
     <div className="container reviews_con">
@@ -57,7 +57,7 @@ const Reviews = () => {
             }}
             modules={[FreeMode, Pagination]}
           >
-            {reviews?.map(item => (
+            {reviews?.map((item) => (
               <SwiperSlide key={item.id}>
                 <div className="review">
                   <div className="review_top">
@@ -79,7 +79,7 @@ const Reviews = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Reviews
+export default Reviews;

@@ -1,40 +1,40 @@
 .nav_btn {
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-    line-height: 24px;
-    color: #ffffff;
-    text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .black_link {
-    color: #231F1E;
+  color: #231f1e;
 }
 
 .nav_btn:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .active {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1440px) {
-    .nav_btn {
-        font-size: 16px;
-    }
+  .nav_btn {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 1080px) {
-    .nav_btn {
-        color: #231F1E;
-        font-size: 38px;
-        font-weight: 500;
-    }
+  .nav_btn {
+    color: #231f1e;
+    font-size: 38px;
+    font-weight: 500;
+  }
 }
 
 @media screen and (max-width: 520px) {
-    .nav_btn {
-        font-size: 20px;
-    }
+  .nav_btn {
+    font-size: 20px;
+  }
 }

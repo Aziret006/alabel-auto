@@ -1,74 +1,74 @@
 .external_calculator {
-    box-sizing: border-box;
-    width: 40%;
-    text-align: center;
-    border: 1px solid #CBCBCB;
-    padding: 36px 46px;
-    border-radius: 5px;
+  box-sizing: border-box;
+  width: 40%;
+  text-align: center;
+  border: 1px solid #cbcbcb;
+  padding: 36px 46px;
+  border-radius: 5px;
 }
 
 .external_calculator_car_lot {
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 44px;
-    text-transform: uppercase;
-    margin: 10px 0 0;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  text-transform: uppercase;
+  margin: 10px 0 0;
 }
 
 .external_calculator_car_title {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    text-transform: uppercase;
-    margin-bottom: 36px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 36px;
 }
 
 @media screen and (max-width: 1440px) {
-    .external_calculator {
-        padding: 32px 42px;
-    }
+  .external_calculator {
+    padding: 32px 42px;
+  }
 
-    .external_calculator_car_lot {
-        font-size: 28px;
-        line-height: 42px;
-    }
+  .external_calculator_car_lot {
+    font-size: 28px;
+    line-height: 42px;
+  }
 
-    .external_calculator_car_title {
-        font-size: 18px;
-        line-height: 22px;
-    }
+  .external_calculator_car_title {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 @media screen and (max-width: 1080px) {
-    .external_calculator {
-        max-width: 600px;
-        width: auto;
-        margin: 40px auto;
-        padding: 32px 42px;
-    }
+  .external_calculator {
+    max-width: 600px;
+    width: auto;
+    margin: 40px auto;
+    padding: 32px 42px;
+  }
 }
 
 @media screen and (max-width: 1080px) {
-    .external_calculator {
-        max-width: 600px;
-        width: auto;
-        margin: 40px auto;
-        padding: 32px 42px;
-    }
+  .external_calculator {
+    max-width: 600px;
+    width: auto;
+    margin: 40px auto;
+    padding: 32px 42px;
+  }
 
-    .external_calculator_car_lot {
-        font-size: 24px;
-        line-height: 30px;
-    }
+  .external_calculator_car_lot {
+    font-size: 24px;
+    line-height: 30px;
+  }
 
-    .external_calculator_car_title {
-        font-size: 15px;
-        line-height: 18px;
-    }
+  .external_calculator_car_title {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 
 @media screen and (max-width: 720px) {
-    .external_calculator {
-        padding: 20px;
-    }
+  .external_calculator {
+    padding: 20px;
+  }
 }

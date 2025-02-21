@@ -1,21 +1,21 @@
 .title {
-    font-weight: 600;
-    font-size: 60px;
-    line-height: 73px;
-    text-align: center;
-    margin: 0;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 73px;
+  text-align: center;
+  margin: 0;
 }
 
 @media screen and (max-width: 1440px) {
-    .title {
-        font-size: 50px;
-        line-height: 61px;
-    }
+  .title {
+    font-size: 50px;
+    line-height: 61px;
+  }
 }
 
 @media screen and (max-width: 720px) {
-    .title {
-        font-size: 32px;
-        line-height: 39px;
-    }
+  .title {
+    font-size: 32px;
+    line-height: 39px;
+  }
 }

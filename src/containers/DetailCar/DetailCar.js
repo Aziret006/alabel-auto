@@ -1,43 +1,43 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import Spinner from '../../components/UI/Spinner/Spinner'
-import CarSlider from './CarSlider/CarSlider'
-import ExternalCalculator from './ExternalCalculator/ExternalCalculator'
-import './DetailCar.css'
-import axiosApi from '../../axiosApi'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import Spinner from "../../components/UI/Spinner/Spinner";
+import CarSlider from "./CarSlider/CarSlider";
+import ExternalCalculator from "./ExternalCalculator/ExternalCalculator";
+import "./DetailCar.css";
+import axiosApi from "../../axiosApi";
 
-import Mileage from '../../assets/icons/mileage.svg'
-import FuelType from '../../assets/icons/fuel.svg'
-import Volume from '../../assets/icons/volume.svg'
-import Transmission from '../../assets/icons/transmission.svg'
-import Drive from '../../assets/icons/drive.svg'
-import Year from '../../assets/icons/year.svg'
-import Body from '../../assets/icons/body.svg'
-import Color from '../../assets/icons/color.svg'
+import Mileage from "../../assets/icons/mileage.svg";
+import FuelType from "../../assets/icons/fuel.svg";
+import Volume from "../../assets/icons/volume.svg";
+import Transmission from "../../assets/icons/transmission.svg";
+import Drive from "../../assets/icons/drive.svg";
+import Year from "../../assets/icons/year.svg";
+import Body from "../../assets/icons/body.svg";
+import Color from "../../assets/icons/color.svg";
 
 const DetailCar = () => {
-  const [car, setCar] = useState(null)
-  const [loader, setLoader] = useState(false)
+  const [car, setCar] = useState(null);
+  const [loader, setLoader] = useState(false);
 
-  const params = useParams()
+  const params = useParams();
 
   useEffect(() => {
     const getCar = async () => {
       try {
-        setLoader(true)
-        const { data } = await axiosApi(`/car/detail/${params.id}/`)
+        setLoader(true);
+        const { data } = await axiosApi(`/car/detail/${params.id}/`);
 
-        setCar(data)
-        setLoader(false)
+        setCar(data);
+        setLoader(false);
       } catch {
-        setLoader(false)
+        setLoader(false);
       }
-    }
+    };
 
-    getCar().catch()
+    getCar().catch();
 
-    window.scrollTo(0, 0)
-  }, [params.id])
+    window.scrollTo(0, 0);
+  }, [params.id]);
 
   return (
     <>
@@ -135,42 +135,60 @@ const DetailCar = () => {
                   </p>
                 )}
                 {car.certificate?.title_code && (
-                  <p key={car.certificate?.title_code} className="characteristics_p">
+                  <p
+                    key={car.certificate?.title_code}
+                    className="characteristics_p"
+                  >
                     <span>TITLE code:</span>
                     <span />
                     <span>{car.certificate?.title_code}</span>
                   </p>
                 )}
                 {car.certificate?.title_sale && (
-                  <p key={car.certificate?.title_sale} className="characteristics_p">
+                  <p
+                    key={car.certificate?.title_sale}
+                    className="characteristics_p"
+                  >
                     <span>TITLE sale:</span>
                     <span />
                     <span>{car.certificate?.title_sale}</span>
                   </p>
                 )}
                 {car.certificate?.primary_damage && (
-                  <p key={car.certificate?.primary_damage} className="characteristics_p">
+                  <p
+                    key={car.certificate?.primary_damage}
+                    className="characteristics_p"
+                  >
                     <span>Main demage:</span>
                     <span />
                     <span>{car.certificate?.primary_damage}</span>
                   </p>
                 )}
                 {car.certificate?.secondary_damage && (
-                  <p key={`1${car.certificate?.secondary_damage}`} className="characteristics_p">
+                  <p
+                    key={`1${car.certificate?.secondary_damage}`}
+                    className="characteristics_p"
+                  >
                     <span>Secondary demage:</span>
                     <span />
                     <span>{car.certificate?.secondary_damage}</span>
                   </p>
                 )}
                 {car.certificate?.airbags && (
-                  <p key={`1${car.certificate?.airbags}`} className="characteristics_p">
+                  <p
+                    key={`1${car.certificate?.airbags}`}
+                    className="characteristics_p"
+                  >
                     <span>Airbags:</span>
                     <span />
                     <span>{car.certificate?.airbags}</span>
                   </p>
                 )}
                 {car.certificate?.location && (
-                  <p key={`1${car.certificate?.location}`} className="characteristics_p">
+                  <p
+                    key={`1${car.certificate?.location}`}
+                    className="characteristics_p"
+                  >
                     <span>Location:</span>
                     <span />
                     <span>{car.certificate?.location}</span>
@@ -196,7 +214,7 @@ const DetailCar = () => {
         )
       )}
     </>
-  )
-}
+  );
+};
 
-export default DetailCar
+export default DetailCar;

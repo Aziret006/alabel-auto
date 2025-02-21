@@ -1,135 +1,136 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 18px;
-    color: #231F1E;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  color: #231f1e;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 .css-gm0faa-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
-    background-color: #F47721 !important;
-    pointer-events: none;
-    color: #fff;
+  background-color: #f47721 !important;
+  pointer-events: none;
+  color: #fff;
 }
 
 .container {
-    max-width: 1540px;
-    margin: 0 auto;
-    padding: 0 50px;
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 50px;
 }
 
 .all_title_block {
-    max-width: 600px;
-    margin: 0 auto 40px;
+  max-width: 600px;
+  margin: 0 auto 40px;
 }
 
 .all_title_block h3 {
-    margin: 5px 0 10px;
+  margin: 5px 0 10px;
 }
 
 .button {
-    cursor: pointer;
-    position: relative;
-    display: block;
-    text-align: center;
-    width: 100%;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    padding: 17px 48px 17px 0;
-    color: #FFFFFF;
-    background: #231F1E;
-    border-radius: 7px;
-    text-decoration: none;
-    border: none;
-    transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 17px 48px 17px 0;
+  color: #ffffff;
+  background: #231f1e;
+  border-radius: 7px;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .footer_btn {
-    background: #FFFFFF;
-    color: #231F1E;
+  background: #ffffff;
+  color: #231f1e;
 }
 
 .calculator_btn {
-    box-sizing: border-box;
-    background: #FFFFFF;
-    color: #231F1E;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #231f1e;
 }
 
 .button::after {
-    position: absolute;
-    content: url("./assets/icons/button-arrow.png");
-    background: #F47721;
-    border-radius: 0 5px 5px 0;
-    padding: 17px 28px 17px 20px;
-    margin-left: 16px;
-    right: 0;
-    top: 0;
-    transition: background-color 0.3s ease-in-out;
+  position: absolute;
+  content: url("./assets/icons/button-arrow.png");
+  background: #f47721;
+  border-radius: 0 5px 5px 0;
+  padding: 17px 28px 17px 20px;
+  margin-left: 16px;
+  right: 0;
+  top: 0;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .button:hover {
-    background: #F47721;
+  background: #f47721;
 }
 
 .footer_btn:hover {
-    color: #fff;
+  color: #fff;
 }
 
-.button:active, .button:active::after {
-    background: #231F1E;
-    transition: background-color 0s ease-in-out;
+.button:active,
+.button:active::after {
+  background: #231f1e;
+  transition: background-color 0s ease-in-out;
 }
 
 .button:disabled {
-    pointer-events: none;
-    background: #ccc;
-    color: rgb(170, 170, 170);
-    cursor: wait;
+  pointer-events: none;
+  background: #ccc;
+  color: rgb(170, 170, 170);
+  cursor: wait;
 }
 
 .fancybox__content img {
-    transform: scale(1.6);
+  transform: scale(1.6);
 }
 
 @media screen and (max-width: 1080px) {
-    .calculator_btn {
-        color: #FFFFFF;
-        background: #231F1E;
-    }
+  .calculator_btn {
+    color: #ffffff;
+    background: #231f1e;
+  }
 }
 
 @media screen and (max-width: 960px) {
-    .container {
-        padding: 0 16px;
-    }
+  .container {
+    padding: 0 16px;
+  }
 
-    .all_title_block {
-        max-width: 542px;
-    }
+  .all_title_block {
+    max-width: 542px;
+  }
 
-    .button {
-        font-size: 16px;
-    }
+  .button {
+    font-size: 16px;
+  }
 }

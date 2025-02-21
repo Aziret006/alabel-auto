@@ -1,31 +1,31 @@
-import React, { useEffect, useState } from 'react'
-import Title from '../UI/Title/Title'
-import CarCard from '../CarCard/CarCard'
-import './Portfolio.css'
-import axiosApi from '../../axiosApi'
-import Spinner from '../UI/Spinner/Spinner'
+import React, { useEffect, useState } from "react";
+import Title from "../UI/Title/Title";
+import CarCard from "../CarCard/CarCard";
+import "./Portfolio.css";
+import axiosApi from "../../axiosApi";
+import Spinner from "../UI/Spinner/Spinner";
 
 const Portfolio = () => {
-  const [cars, setCars] = useState([])
-  const [loader, setLoader] = useState(false)
+  const [cars, setCars] = useState([]);
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     const getCars = async () => {
       try {
-        setLoader(true)
-        const { data } = await axiosApi('/car_main/')
+        setLoader(true);
+        const { data } = await axiosApi("/car_main/");
 
         if (data) {
-          setCars(data)
+          setCars(data);
         }
-        setLoader(false)
+        setLoader(false);
       } catch {
-        setLoader(false)
+        setLoader(false);
       }
-    }
+    };
 
-    getCars().catch()
-  }, [])
+    getCars().catch();
+  }, []);
 
   return (
     <div className="portfolio">
@@ -44,7 +44,7 @@ const Portfolio = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

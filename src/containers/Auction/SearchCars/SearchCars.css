@@ -1,135 +1,135 @@
 .cars_block {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 95px !important;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 95px !important;
 }
 
 .filter_menu {
-    display: none;
-    cursor: pointer;
-    background: #231F1E;
-    color: #fff;
-    margin: 0 -16px;
-    padding: 14px 0;
-    text-align: center;
+  display: none;
+  cursor: pointer;
+  background: #231f1e;
+  color: #fff;
+  margin: 0 -16px;
+  padding: 14px 0;
+  text-align: center;
 }
 
 .filter_menu span {
-    position: relative;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .filter_menu span::after {
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    transform: translateY(-50%);
-    content: '';
-    width: 0;
-    height: 0;
-    border-width: 5px 5px 0 5px;
-    border-color: #FFFFFF transparent transparent transparent;
-    border-style: solid;
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 5px 5px 0 5px;
+  border-color: #ffffff transparent transparent transparent;
+  border-style: solid;
 }
 
 .filter_menu_active {
-    background: #F47721;
+  background: #f47721;
 }
 
 .cars_left {
-    width: 27%;
+  width: 27%;
 }
 
 .cars_left.cars_left_active {
-    height: auto
+  height: auto;
 }
 
 .cars_right {
-    width: 70%;
+  width: 70%;
 }
 
 .search_cars {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    column-gap: 10px;
-    row-gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 10px;
+  row-gap: 24px;
 }
 
 .cars_not_found {
-    font-size: 44px;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin: 130px auto 0;
-    color: #F47721;
+  font-size: 44px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 130px auto 0;
+  color: #f47721;
 }
 
 .car {
-    width: 46%;
+  width: 46%;
 }
 
 .car .car_card_image {
-    height: 280px;
-    max-width: 500px;
+  height: 280px;
+  max-width: 500px;
 }
 
 @media screen and (max-width: 1440px) {
-    .cars_not_found {
-        font-size: 36px;
-        margin: 130px auto 0;
-    }
+  .cars_not_found {
+    font-size: 36px;
+    margin: 130px auto 0;
+  }
 }
 
 @media screen and (max-width: 1080px) {
-    .cars_block {
-        flex-direction: column;
-        gap: 26px;
-    }
+  .cars_block {
+    flex-direction: column;
+    gap: 26px;
+  }
 
-    .cars_right {
-        width: 100%;
-    }
+  .cars_right {
+    width: 100%;
+  }
 
-    .search_cars {
-        justify-content: space-between;
-    }
+  .search_cars {
+    justify-content: space-between;
+  }
 
-    .cars_left {
-        width: 100%;
-    }
+  .cars_left {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 720px) {
-    .cars_block {
-        margin-top: 65px !important;
-    }
+  .cars_block {
+    margin-top: 65px !important;
+  }
 
-    .search_cars {
-        justify-content: center;
-    }
+  .search_cars {
+    justify-content: center;
+  }
 
-    .filter_menu {
-        display: block;
-    }
+  .filter_menu {
+    display: block;
+  }
 
-    .cars_left {
-        height: 0;
-        overflow: hidden;
-    }
+  .cars_left {
+    height: 0;
+    overflow: hidden;
+  }
 
-    .cars_not_found {
-        font-size: 26px;
-        margin: 60px auto 0;
-    }
+  .cars_not_found {
+    font-size: 26px;
+    margin: 60px auto 0;
+  }
 
-    .car {
-        width: 95%;
-    }
+  .car {
+    width: 95%;
+  }
 
-    .car .car_card {
-        max-width: 480px;
-        margin: 0 auto;
-    }
+  .car .car_card {
+    max-width: 480px;
+    margin: 0 auto;
+  }
 }
