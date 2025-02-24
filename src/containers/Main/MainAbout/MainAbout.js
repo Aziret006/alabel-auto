@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import UpTitle from "../../../components/UI/UpTitle/UpTitle";
-import Title from "../../../components/UI/Title/Title";
-import SubTitle from "../../../components/UI/SubTitle/SubTitle";
-import "./MainAbout.css";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import UpTitle from '../../../components/UI/UpTitle/UpTitle'
+import Title from '../../../components/UI/Title/Title'
+import SubTitle from '../../../components/UI/SubTitle/SubTitle'
+import './MainAbout.css'
 
-import mainAbout from "../../../assets/images/main_about.jpg";
-import canada from "../../../assets/images/sheet-canada.png";
+import mainAbout from '../../../assets/images/main_about.jpg'
+import canada from '../../../assets/images/sheet-canada.png'
 
 const MainAbout = () => (
   <div className="main_about">
@@ -23,11 +23,9 @@ const MainAbout = () => (
         </div>
         <div className="main_about_right">
           <p>
-            Our company was founded in 2020 as an exporter of used vehicles from
-            Canada. We specialize in purchasing cars from Canadian auctions, as
-            well as from official dealers and private individuals. Our goal is
-            to offer our clients a wide selection of high-quality vehicles at
-            competitive prices.
+            Our company was founded in 2020 as an exporter of used vehicles from Canada. We specialize in purchasing
+            cars from Canadian auctions, as well as from official dealers and private individuals. Our goal is to offer
+            our clients a wide selection of high-quality vehicles at competitive prices.
           </p>
           <div className="main_about_button">
             <Link className="button" to="/">
@@ -39,6 +37,6 @@ const MainAbout = () => (
     </div>
     <img className="main_about_canada" src={canada} alt="Alabel" />
   </div>
-);
+)
 
-export default MainAbout;
+export default MainAbout

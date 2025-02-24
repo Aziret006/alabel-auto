@@ -1,5 +1,5 @@
-import React from "react";
-import "./AdvantagesCard.css";
+import React from 'react'
+import './AdvantagesCard.css'
 
 const AdvantagesCard = ({ card }) => (
   <div className="advantages_card">
@@ -8,6 +8,6 @@ const AdvantagesCard = ({ card }) => (
     </div>
     <p>{card.title}</p>
   </div>
-);
+)
 
-export default AdvantagesCard;
+export default AdvantagesCard

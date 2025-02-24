@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../Logo/Logo";
-import Feedback from "../Feedback/Feedback";
-import "./Footer.css";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Logo from '../Logo/Logo'
+import Feedback from '../Feedback/Feedback'
+import './Footer.css'
 
 const Footer = () => (
   <footer className="footer">
@@ -12,9 +12,8 @@ const Footer = () => (
           <Logo />
         </div>
         <p>
-          Lorem ipsum dolor sit amet consectetur. Elit dolor sed nec aliquam
-          ultrices in aliquet. Nunc odio in a integer senectus integer massa
-          euismod iaculis.{" "}
+          Lorem ipsum dolor sit amet consectetur. Elit dolor sed nec aliquam ultrices in aliquet. Nunc odio in a integer
+          senectus integer massa euismod iaculis.{' '}
         </p>
       </div>
       <div className="footer_top_middle">
@@ -43,6 +42,6 @@ const Footer = () => (
       </p>
     </div>
   </footer>
-);
+)
 
-export default Footer;
+export default Footer

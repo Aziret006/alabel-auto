@@ -1,17 +1,17 @@
-import React from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
-import Main from "./containers/Main/Main";
-import Layout from "./components/UI/Layout/Layout";
-import Contacts from "./containers/Contacts/Contacts";
-import About from "./containers/About/About";
-import ServicesPage from "./containers/ServicesPage/ServicesPage";
-import Auction from "./containers/Auction/Auction";
-import "./App.css";
-import DetailCar from "./containers/DetailCar/DetailCar";
+import React from 'react'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import Main from './containers/Main/Main'
+import Layout from './components/UI/Layout/Layout'
+import Contacts from './containers/Contacts/Contacts'
+import About from './containers/About/About'
+import ServicesPage from './containers/ServicesPage/ServicesPage'
+import Auction from './containers/Auction/Auction'
+import './App.css'
+import DetailCar from './containers/DetailCar/DetailCar'
 
 function App() {
-  const location = useLocation();
+  const location = useLocation()
 
   return (
     <Layout>
@@ -36,7 +36,7 @@ function App() {
         </CSSTransition>
       </TransitionGroup>
     </Layout>
-  );
+  )
 }
 
-export default App;
+export default App

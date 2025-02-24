@@ -1,7 +1,7 @@
-import React from "react";
-import Title from "../UI/Title/Title";
-import SubTitle from "../UI/SubTitle/SubTitle";
-import "./OurContacts.css";
+import React from 'react'
+import Title from '../UI/Title/Title'
+import SubTitle from '../UI/SubTitle/SubTitle'
+import './OurContacts.css'
 
 const OurContacts = ({ classes }) => (
   <div className={`container our_contacts_con ${classes}`}>
@@ -50,6 +50,6 @@ const OurContacts = ({ classes }) => (
       </div>
     </div>
   </div>
-);
+)
 
-export default OurContacts;
+export default OurContacts

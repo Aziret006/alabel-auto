@@ -1,18 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./CarCard.css";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import './CarCard.css'
 
-import notImage from "../../assets/images/not_image.webp";
-import copart from "../../assets/icons/copart.png";
-import impact from "../../assets/icons/impact.png";
+import notImage from '../../assets/images/not_image.webp'
+import copart from '../../assets/icons/copart.png'
+import impact from '../../assets/icons/impact.png'
 
 const CarCard = ({ car }) => {
-  let auction;
+  let auction
 
-  if (car.auction === "Impact (Canada)") {
-    auction = impact;
-  } else if (car.auction === "Copart (Canada)") {
-    auction = copart;
+  if (car.auction === 'Impact (Canada)') {
+    auction = impact
+  } else if (car.auction === 'Copart (Canada)') {
+    auction = copart
   }
 
   return (
@@ -45,7 +45,7 @@ const CarCard = ({ car }) => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CarCard;
+export default CarCard

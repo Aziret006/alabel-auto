@@ -1,59 +1,51 @@
-import percent from "./assets/icons/percent.png";
-import earth from "./assets/icons/earth.png";
-import medal from "./assets/icons/medal.png";
-import box from "./assets/icons/box.png";
-import like from "./assets/icons/like.png";
-import car1 from "./assets/images/black-car.jpg";
-import car2 from "./assets/images/blue-car.jpg";
-import car3 from "./assets/images/orange-car.jpg";
-import car4 from "./assets/images/white-car.jpg";
+import percent from './assets/icons/percent.png'
+import earth from './assets/icons/earth.png'
+import medal from './assets/icons/medal.png'
+import box from './assets/icons/box.png'
+import like from './assets/icons/like.png'
+import car1 from './assets/images/black-car.jpg'
+import car2 from './assets/images/blue-car.jpg'
+import car3 from './assets/images/orange-car.jpg'
+import car4 from './assets/images/white-car.jpg'
 
 export const years = [
-  2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012,
-  2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023,
-];
+  2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018,
+  2019, 2020, 2021, 2022, 2023,
+]
 
 export const mileages = [
-  "0 - 25000",
-  "25000 - 50000",
-  "50000 - 75000",
-  "75000 - 100000",
-  "100000 - 150000",
-  "150000 - 200000",
-  "200000 <",
-];
+  '0 - 25000',
+  '25000 - 50000',
+  '50000 - 75000',
+  '75000 - 100000',
+  '100000 - 150000',
+  '150000 - 200000',
+  '200000 <',
+]
 
-export const fuelType = [
-  "Flexible Fuel",
-  "Diesel",
-  "Gasoline",
-  "Hybrid",
-  "Electric",
-  "PlugInHybrid",
-  "Other",
-];
+export const fuelType = ['Flexible Fuel', 'Diesel', 'Gasoline', 'Hybrid', 'Electric', 'PlugInHybrid', 'Other']
 
-export const transmission = ["AUTOMATIC", "MANUAL"];
+export const transmission = ['AUTOMATIC', 'MANUAL']
 
-export const sortDateAuction = ["near", "late"];
+export const sortDateAuction = ['near', 'late']
 
-export const sortYearMade = ["new", "old"];
+export const sortYearMade = ['new', 'old']
 
 export const mainAdvantages = [
-  { img: percent, title: "Attractive prices" },
-  { img: earth, title: "Less competition, more opportunities" },
-  { img: medal, title: "Transparent vehicle history" },
+  { img: percent, title: 'Attractive prices' },
+  { img: earth, title: 'Less competition, more opportunities' },
+  { img: medal, title: 'Transparent vehicle history' },
   {
     img: box,
-    title: "Measurements in kilometers and liters",
+    title: 'Measurements in kilometers and liters',
   },
-  { img: like, title: "High quality and safety" },
+  { img: like, title: 'High quality and safety' },
   {
     img: medal,
-    title: "Are you buying for export? We will cover 100% of all taxes!",
+    title: 'Are you buying for export? We will cover 100% of all taxes!',
   },
-  { img: earth, title: "Reliability and transparency." },
-];
+  { img: earth, title: 'Reliability and transparency.' },
+]
 
 export const processData = [
   {
@@ -99,8 +91,7 @@ export const processData = [
             d='M8.75 35.625a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM71.25 35.625a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z'
           />
         </svg>`,
-    title:
-      " ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ",
+    title: ' ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ',
   },
   {
     img: `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'>
@@ -135,8 +126,7 @@ export const processData = [
             d='M39.375 26.188h-18.75l1.875-4.313c.563-1.313 1.875-2.25 3.375-2.25h8.156c1.5 0 2.813.938 3.469 2.25l1.875 4.313ZM24.375 35.563H18.75v1.874a1.88 1.88 0 0 0 1.875 1.876H22.5a1.88 1.88 0 0 0 1.875-1.876v-1.874ZM41.25 35.563h-5.625v1.874a1.88 1.88 0 0 0 1.875 1.876h1.875a1.88 1.88 0 0 0 1.875-1.876v-1.874ZM17.813 25.25H21M39.375 25.25h2.813M34.688 35.563h-9.376l1.313-2.72c.281-.656.938-1.03 1.688-1.03h3.28c.75 0 1.407.375 1.688 1.03l1.407 2.72ZM20.625 30.875h2.813M36.563 30.875h2.812'
           />
         </svg>`,
-    title:
-      " ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ",
+    title: ' ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ',
   },
   {
     img: `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'>
@@ -155,8 +145,7 @@ export const processData = [
             d='m65 25 .02 9.947a1.26 1.26 0 0 1-1.376 1.273L40 33.854l-.015-7.66 23.64-2.459A1.26 1.26 0 0 1 65 25Z'
           />
         </svg>`,
-    title:
-      " ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ",
+    title: ' ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ',
   },
   {
     img: `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'>
@@ -196,8 +185,7 @@ export const processData = [
             </clipPath>
           </defs>
         </svg>`,
-    title:
-      " ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ",
+    title: ' ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ',
   },
   {
     img: `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'>
@@ -218,58 +206,57 @@ export const processData = [
             </clipPath>
           </defs>
         </svg>`,
-    title:
-      " ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ",
+    title: ' ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ',
   },
-];
+]
 
 export const cars = [
   {
     img: car1,
-    title: "Honda civic si",
-    description: "Mii 1.0 ASG 3 porte Chic",
+    title: 'Honda civic si',
+    description: 'Mii 1.0 ASG 3 porte Chic',
     price: 5260,
   },
   {
     img: car2,
-    title: "Honda civic si",
-    description: "Mii 1.0 ASG 3 porte Chic",
+    title: 'Honda civic si',
+    description: 'Mii 1.0 ASG 3 porte Chic',
     price: 5260,
   },
   {
     img: car3,
-    title: "Honda civic si",
-    description: "Mii 1.0 ASG 3 porte Chic",
+    title: 'Honda civic si',
+    description: 'Mii 1.0 ASG 3 porte Chic',
     price: 5260,
   },
   {
     img: car4,
-    title: "Honda civic si",
-    description: "Mii 1.0 ASG 3 porte Chic",
+    title: 'Honda civic si',
+    description: 'Mii 1.0 ASG 3 porte Chic',
     price: 5260,
   },
   {
     img: car1,
-    title: "Honda civic si",
-    description: "Mii 1.0 ASG 3 porte Chic",
+    title: 'Honda civic si',
+    description: 'Mii 1.0 ASG 3 porte Chic',
     price: 5260,
   },
   {
     img: car2,
-    title: "Honda civic si",
-    description: "Mii 1.0 ASG 3 porte Chic",
+    title: 'Honda civic si',
+    description: 'Mii 1.0 ASG 3 porte Chic',
     price: 5260,
   },
   {
     img: car3,
-    title: "Honda civic si",
-    description: "Mii 1.0 ASG 3 porte Chic",
+    title: 'Honda civic si',
+    description: 'Mii 1.0 ASG 3 porte Chic',
     price: 5260,
   },
   {
     img: car4,
-    title: "Honda civic si",
-    description: "Mii 1.0 ASG 3 porte Chic",
+    title: 'Honda civic si',
+    description: 'Mii 1.0 ASG 3 porte Chic',
     price: 5260,
   },
-];
+]
