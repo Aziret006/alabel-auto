@@ -14,23 +14,48 @@ import image4 from '../../assets/icons/conversation.png'
 const data = [
   {
     image: image1,
-    title: 'Services',
-    description: 'Lorem ipsum dolor sit amet consectetur. Elit dolor sed nec aliquam ultrices in aliquet. ',
+    title: 'Clean',
+    description: 'Vehicles in good condition, with no damage, and not involved in accidents or insurance claims.',
   },
   {
     image: image2,
-    title: 'Services',
-    description: 'Lorem ipsum dolor sit amet consectetur. Elit dolor sed nec aliquam ultrices in aliquet. ',
+    title: 'Repossessed',
+    description: 'Vehicles with damage requiring repairs (accidents, fires, floods, and other incidents)',
   },
   {
     image: image3,
-    title: 'Services',
-    description: 'Lorem ipsum dolor sit amet consectetur. Elit dolor sed nec aliquam ultrices in aliquet. ',
+    title: 'Recovered',
+    description: 'Vehicles that were stolen and later recovered by owners or insurance companies.',
   },
   {
     image: image4,
-    title: 'Services',
-    description: 'Lorem ipsum dolor sit amet consectetur. Elit dolor sed nec aliquam ultrices in aliquet. ',
+    title: 'Fleet',
+    description: 'Vehicles previously used by corporate clients or in rental programs.',
+  },
+  {
+    image: image1,
+    title: 'Lease',
+    description: 'Vehicles previously under lease.',
+  },
+  {
+    image: image2,
+    title: 'Rental',
+    description: 'Vehicles that were used for rentals.',
+  },
+  {
+    image: image3,
+    title: 'Charity',
+    description: 'Vehicles donated by charitable organizations',
+  },
+  {
+    image: image4,
+    title: 'Government',
+    description: 'Vehicles previously owned by government agencies',
+  },
+  {
+    image: image1,
+    title: 'Repairable',
+    description: 'Vehicles that cannot be repaired or registered for road use.',
   },
 ]
 
@@ -39,7 +64,7 @@ const Services = () => (
     <div className="all_title_block">
       <UpTitle uptitle="Our" />
       <Title title="Services" />
-      <SubTitle subtitle="Lorem ipsum dolor sit amet consectetur. Elit dolor sed nec aliquam ultrices in aliquet. " />
+      <SubTitle subtitle="At Canadian auctions, various categories of vehicles are available, classified as follows: " />
     </div>
     <div className="services_cards_row">
       <div className="services_cards">

@@ -17,8 +17,8 @@ const AboutCompany = () => (
     <div className="container">
       <div className="all_title_block">
         <UpTitle uptitle="About" />
-        <Title title="Company" />
-        <SubTitle subtitle="Lorem ipsum dolor sit amet consectetur. Elit dolor sed nec aliquam ultrices in aliquet. " />
+        <Title title="Alabel Auto Export" />
+        <SubTitle subtitle="We specialize in helping customers purchase vehicles and equipment at IAA, Copart, Adesa auctions, and from authorized dealers, with worldwide shipping. In addition, we also purchase Bikes & ATVs, snowmobiles, and watercraft" />
       </div>
       <div className="about_block_images">
         <div>

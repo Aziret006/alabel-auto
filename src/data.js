@@ -49,49 +49,51 @@ export const mainAdvantages = [
 
 export const processData = [
   {
-    img: `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'>
-          <path stroke='#231F1E' stroke-width='1.8' d='m21.25 24.375 5 2.5h5' />
+    img: `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="none">
+          <path stroke="#231F1E" stroke-width="1.8" d="m21.25 24.375 5 2.5h5" />
           <path
-            stroke='#231F1E'
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            stroke-width='1.8'
-            d='m55 25.625-1.63.815a2.5 2.5 0 0 1-1.805.168l-7.142-2.04a5.001 5.001 0 0 0-1.373-.194h-7.874a5 5 0 0 0-4.16 2.227L25 35.625h6.162a2.5 2.5 0 0 0 2.08-1.114l1.016-1.523a2.5 2.5 0 0 1 2.08-1.113h1.655a2.5 2.5 0 0 1 1.387.42L58.5 45.042a3.126 3.126 0 0 1 .767 4.476l-.077.102a3.125 3.125 0 0 1-4.108.805L45 44.375'
+            stroke="#231F1E"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.8"
+            d="m55 25.625-1.63.815a2.5 2.5 0 0 1-1.805.168l-7.142-2.04a5.001 5.001 0 0 0-1.373-.194h-7.874a5 5 0 0 0-4.16 2.227L25 35.625h6.162a2.5 2.5 0 0 0 2.08-1.114l1.016-1.523a2.5 2.5 0 0 1 2.08-1.113h1.655a2.5 2.5 0 0 1 1.387.42L58.5 45.042a3.126 3.126 0 0 1 .767 4.476l-.077.102a3.125 3.125 0 0 1-4.108.805L45 44.375"
           />
-          <path stroke='#231F1E' stroke-width='1.8' d='m58.75 44.375 5-6.25M17.5 44.375l-5-5' />
+          <path stroke="#231F1E" stroke-width="1.8" d="m58.75 44.375 5-6.25M17.5 44.375l-5-5" />
           <path
-            stroke='#231F1E'
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            stroke-width='1.8'
-            d='M24.99 19.39 10.007 43.125l-8.74-4.997M27.515 43.518l.132.087a2.442 2.442 0 0 1 .703 3.398l-4.956 7.52a2.462 2.462 0 0 1-3.408.71l-.133-.088a2.442 2.442 0 0 1-.702-3.398l4.955-7.52a2.462 2.462 0 0 1 3.409-.71Z'
-          />
-          <path
-            stroke='#231F1E'
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            stroke-width='1.8'
-            d='M30.38 48.403a2.494 2.494 0 0 1 .723 3.46l-3.422 5.23a2.495 2.495 0 0 1-3.46.723 2.495 2.495 0 0 1-.724-3.46l3.423-5.23a2.494 2.494 0 0 1 3.46-.723Z'
+            stroke="#231F1E"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.8"
+            d="M24.99 19.39 10.007 43.125l-8.74-4.997M27.515 43.518l.132.087a2.442 2.442 0 0 1 .703 3.398l-4.956 7.52a2.462 2.462 0 0 1-3.408.71l-.133-.088a2.442 2.442 0 0 1-.702-3.398l4.955-7.52a2.462 2.462 0 0 1 3.409-.71Z"
           />
           <path
-            stroke='#231F1E'
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            stroke-width='1.8'
-            d='M33.714 52.266a2.5 2.5 0 0 1 .744 3.46l-2.228 3.453a2.489 2.489 0 0 1-3.453.743 2.5 2.5 0 0 1-.744-3.46l2.228-3.454a2.489 2.489 0 0 1 3.453-.742ZM21.617 43.483a2.5 2.5 0 0 1 .743 3.46l-2.227 3.453a2.489 2.489 0 0 1-3.454.742 2.5 2.5 0 0 1-.743-3.46l2.227-3.453a2.489 2.489 0 0 1 3.454-.742ZM52.51 19.39l14.984 23.735 8.74-4.997M55.629 51.316l-1.074 1.478a3.75 3.75 0 0 1-5.022.977L42.5 49.375M51.913 55.017l-1.107 1.525a3.903 3.903 0 0 1-5.095 1.096L40 54.375'
+            stroke="#231F1E"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.8"
+            d="M30.38 48.403a2.494 2.494 0 0 1 .723 3.46l-3.422 5.23a2.495 2.495 0 0 1-3.46.723 2.495 2.495 0 0 1-.724-3.46l3.423-5.23a2.494 2.494 0 0 1 3.46-.723Z"
           />
           <path
-            stroke='#231F1E'
-            stroke-linejoin='round'
-            stroke-width='1.8'
-            d='m46.019 58.182-1.096 1.675a3.078 3.078 0 0 1-3.675 1.19l-7.498-2.865'
+            stroke="#231F1E"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.8"
+            d="M33.714 52.266a2.5 2.5 0 0 1 .744 3.46l-2.228 3.453a2.489 2.489 0 0 1-3.453.743 2.5 2.5 0 0 1-.744-3.46l2.228-3.454a2.489 2.489 0 0 1 3.453-.742ZM21.617 43.483a2.5 2.5 0 0 1 .743 3.46l-2.227 3.453a2.489 2.489 0 0 1-3.454.742 2.5 2.5 0 0 1-.743-3.46l2.227-3.453a2.489 2.489 0 0 1 3.454-.742ZM52.51 19.39l14.984 23.735 8.74-4.997M55.629 51.316l-1.074 1.478a3.75 3.75 0 0 1-5.022.977L42.5 49.375M51.913 55.017l-1.107 1.525a3.903 3.903 0 0 1-5.095 1.096L40 54.375"
           />
           <path
-            fill='#231F1E'
-            d='M8.75 35.625a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM71.25 35.625a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z'
+            stroke="#231F1E"
+            stroke-linejoin="round"
+            stroke-width="1.8"
+            d="m46.019 58.182-1.096 1.675a3.078 3.078 0 0 1-3.675 1.19l-7.498-2.865"
+          />
+          <path
+            fill="#231F1E"
+            d="M8.75 35.625a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM71.25 35.625a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"
           />
         </svg>`,
-    title: ' ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ',
+    title:
+      'Browse through available vehicles on IAA, Copart, ADESA, or other sources (dealers, private sellers). You can choose from cars, motorcycles, ATVs, snowmobiles, and jet skis.',
+    text: 'Choose Your Vehicle',
   },
   {
     img: `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'>
@@ -126,7 +128,9 @@ export const processData = [
             d='M39.375 26.188h-18.75l1.875-4.313c.563-1.313 1.875-2.25 3.375-2.25h8.156c1.5 0 2.813.938 3.469 2.25l1.875 4.313ZM24.375 35.563H18.75v1.874a1.88 1.88 0 0 0 1.875 1.876H22.5a1.88 1.88 0 0 0 1.875-1.876v-1.874ZM41.25 35.563h-5.625v1.874a1.88 1.88 0 0 0 1.875 1.876h1.875a1.88 1.88 0 0 0 1.875-1.876v-1.874ZM17.813 25.25H21M39.375 25.25h2.813M34.688 35.563h-9.376l1.313-2.72c.281-.656.938-1.03 1.688-1.03h3.28c.75 0 1.407.375 1.688 1.03l1.407 2.72ZM20.625 30.875h2.813M36.563 30.875h2.812'
           />
         </svg>`,
-    title: ' ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ',
+    title:
+      'Once you ve selected the vehicle, contact us for advice or assistance. We can help you with vehicle selection, history verification, and provide more details about the options available.',
+    text: 'Contact Us',
   },
   {
     img: `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'>
@@ -145,7 +149,9 @@ export const processData = [
             d='m65 25 .02 9.947a1.26 1.26 0 0 1-1.376 1.273L40 33.854l-.015-7.66 23.64-2.459A1.26 1.26 0 0 1 65 25Z'
           />
         </svg>`,
-    title: ' ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ',
+    text: 'Vehicle History Verification',
+    title:
+      'We check the history of each vehicle to confirm its condition, mileage, and ensure that there are no hidden issues. We provide you with a report',
   },
   {
     img: `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'>
@@ -185,7 +191,9 @@ export const processData = [
             </clipPath>
           </defs>
         </svg>`,
-    title: ' ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ',
+    title:
+      'To begin the purchase process, we require a 20% deposit of the estimated vehicle cost. This ensures that your interest is secured and that we can proceed with the bidding or purchase on your behalf',
+    text: 'Deposit Payment',
   },
   {
     img: `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'>
@@ -206,7 +214,9 @@ export const processData = [
             </clipPath>
           </defs>
         </svg>`,
-    title: ' ipsum dolor sit amet consectetur. Sit non feugiat sit viverra vitae pellentesque suspendisse. ',
+    title:
+      ' If you are interested in buying through an auction, we assist with the bidding process and purchase through our account. Our experience ensures that you get the best price for your chosen vehicle.',
+    text: 'Bidding and Purchase',
   },
 ]
 

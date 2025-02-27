@@ -30,11 +30,17 @@
 
 .process_card p {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 200%;
   margin: 0;
 }
-
+.process_card h4 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0;
+  text-transform: uppercase;
+}
 .process_card:hover path {
   stroke: #f47721;
   transition: stroke 0.3s;
@@ -71,7 +77,7 @@
   }
 
   .process_card p {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .process_card div:first-child {
@@ -109,7 +115,7 @@
   }
 
   .process_card p {
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .process_card div:first-child {
