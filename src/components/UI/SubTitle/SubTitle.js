@@ -1,6 +1,6 @@
-import React from 'react'
-import './SubTitle.css'
+import React from "react";
+import "./SubTitle.css";
 
-const SubTitle = ({ subtitle }) => <p className="subtitle">{subtitle}</p>
+const SubTitle = ({ subtitle }) => <p className="subtitle">{subtitle}</p>;
 
-export default SubTitle
+export default SubTitle;

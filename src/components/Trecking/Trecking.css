@@ -1,0 +1,115 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.carrier-title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #f47721;
+}
+
+.main-title {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 61px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #231f1e;
+  margin-bottom: 40px;
+}
+
+.carrier-row {
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 71px; /* Оптимизированное расстояние */
+  flex-wrap: wrap;
+}
+
+.carrier-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f47a22;
+  padding: 32px 28px;
+  flex: 1 1 250px; /* Фиксируем размер для лучшей адаптивности */
+  min-width: 180px;
+  max-width: 300px; /* Чтобы не растягивалось слишком сильно */
+  border-radius: 6px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carrier-logo-wrapper {
+  height: 40px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrier-logo {
+  width: 150px;
+  height: 30px;
+}
+
+.carrier-name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #231f1e;
+  text-align: center;
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+    width: 90%;
+  }
+
+  .carrier-row {
+    gap: 12px;
+  }
+
+  .carrier-item {
+    padding: 28px 24px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .main-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .carrier-row {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .carrier-item {
+    width: 100%; /* Растягиваем на всю ширину */
+    max-width: 85%;
+    padding: 24px 20px;
+  }
+}
+.carrier-item:hover {
+  transform: translateY(-10px);
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import {
   Box,
   CircularProgress,
@@ -9,60 +9,60 @@ import {
   Select,
   TextField,
   Typography,
-} from '@mui/material'
-import { makeStyles } from 'tss-react/mui'
-import { Link } from 'react-router-dom'
-import axiosApi from '../../../../axiosApi'
+} from "@mui/material";
+import { makeStyles } from "tss-react/mui";
+import { Link } from "react-router-dom";
+import axiosApi from "../../../../axiosApi";
 
-const useStyles = makeStyles()(theme => ({
+const useStyles = makeStyles()((theme) => ({
   mainInput: {
-    '.css-144wcdf-MuiFormLabel-root-MuiInputLabel-root': {
-      fontSize: '1.1rem',
+    ".css-144wcdf-MuiFormLabel-root-MuiInputLabel-root": {
+      fontSize: "1.1rem",
     },
-    '.css-14lo706': {
-      fontSize: '1rem',
+    ".css-14lo706": {
+      fontSize: "1rem",
     },
-    '& label': {
-      color: 'white',
-      [theme.breakpoints.down('lx')]: {
-        color: '#231F1E',
+    "& label": {
+      color: "white",
+      [theme.breakpoints.down("lx")]: {
+        color: "#231F1E",
       },
     },
-    '& input': {
-      color: '#fff',
-      background: '#3C3C3C',
-      borderRadius: '3px',
-      [theme.breakpoints.down('lx')]: {
-        background: 'transparent',
-        color: '#231F1E',
+    "& input": {
+      color: "#fff",
+      background: "#3C3C3C",
+      borderRadius: "3px",
+      [theme.breakpoints.down("lx")]: {
+        background: "transparent",
+        color: "#231F1E",
       },
     },
   },
   mainSelect: {
-    color: '#fff',
-    background: '#3C3C3C',
-    borderRadius: '3px',
-    '& .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon': {
-      color: '#fff',
+    color: "#fff",
+    background: "#3C3C3C",
+    borderRadius: "3px",
+    "& .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon": {
+      color: "#fff",
     },
-    '& .css-bpeome-MuiSvgIcon-root-MuiSelect-icon': {
-      color: '#fff',
+    "& .css-bpeome-MuiSvgIcon-root-MuiSelect-icon": {
+      color: "#fff",
     },
-    [theme.breakpoints.down('lx')]: {
-      background: 'transparent',
-      color: '#231F1E',
-      '& .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon': {
-        color: '#231F1E',
+    [theme.breakpoints.down("lx")]: {
+      background: "transparent",
+      color: "#231F1E",
+      "& .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon": {
+        color: "#231F1E",
       },
-      '& .css-bpeome-MuiSvgIcon-root-MuiSelect-icon': {
-        color: '#231F1E',
+      "& .css-bpeome-MuiSvgIcon-root-MuiSelect-icon": {
+        color: "#231F1E",
       },
     },
   },
-}))
+}));
 
 const MainCalculator = () => {
-  const { classes } = useStyles()
+  const { classes } = useStyles();
   const [calculator, setCalculator] = useState({
     auctions: [],
     locations: [],
@@ -72,54 +72,57 @@ const MainCalculator = () => {
     fromPorts: [],
     total: 0,
     service_auto_canada: 0,
-  })
+  });
   const [calculateData, setCalculateData] = useState({
-    auction: '',
-    city: '',
-    port_canada: '',
-    port_destination: '',
-    country_destination: '',
-    body: '',
+    auction: "",
+    city: "",
+    port_canada: "",
+    port_destination: "",
+    country_destination: "",
+    body: "",
     price: 1000,
-  })
-  const [loader, setLoader] = useState(false)
+  });
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     const getCalculatorData = async () => {
       try {
-        const auctions = await axiosApi('/car/auction_list/')
-        const body = await axiosApi('/car/body_for_calculator/')
-        const countries = await axiosApi('/car/country_destination/')
-        const ports = await axiosApi('/car/port_destination/')
+        const auctions = await axiosApi("/car/auction_list/");
+        const body = await axiosApi("/car/body_for_calculator/");
+        const countries = await axiosApi("/car/country_destination/");
+        const ports = await axiosApi("/car/port_destination/");
 
-        setCalculator(prev => ({
+        setCalculator((prev) => ({
           ...prev,
           auctions: auctions?.data,
           body: body?.data,
           countries: countries?.data,
           ports: ports?.data,
-        }))
+        }));
       } catch {}
-    }
+    };
 
-    getCalculatorData().catch()
-  }, [])
+    getCalculatorData().catch();
+  }, []);
 
   useEffect(() => {
-    const calculate = async dataCalculator => {
+    const calculate = async (dataCalculator) => {
       try {
-        setLoader(true)
-        const { data } = await axiosApi.post('/car/calculator/', dataCalculator)
-        setCalculator(prev => ({
+        setLoader(true);
+        const { data } = await axiosApi.post(
+          "/car/calculator/",
+          dataCalculator
+        );
+        setCalculator((prev) => ({
           ...prev,
           total: data?.total || 0,
           service_auto_canada: data?.service_auto_canada || 0,
-        }))
-        setLoader(false)
+        }));
+        setLoader(false);
       } catch {
-        setLoader(false)
+        setLoader(false);
       }
-    }
+    };
 
     if (
       calculateData.body &&
@@ -128,41 +131,41 @@ const MainCalculator = () => {
       calculateData.country_destination &&
       calculateData.price
     ) {
-      calculate(calculateData).catch()
+      calculate(calculateData).catch();
     }
-  }, [calculateData])
+  }, [calculateData]);
 
-  const changeHandler = e => {
-    const { name, value } = e.target
+  const changeHandler = (e) => {
+    const { name, value } = e.target;
 
-    setCalculateData(prev => ({ ...prev, [name]: value }))
-  }
+    setCalculateData((prev) => ({ ...prev, [name]: value }));
+  };
 
-  const getLocations = async id => {
+  const getLocations = async (id) => {
     try {
-      const { data } = await axiosApi(`/car/city_list/?auction=${id}`)
+      const { data } = await axiosApi(`/car/city_list/?auction=${id}`);
 
       if (data) {
-        setCalculator(prev => ({
+        setCalculator((prev) => ({
           ...prev,
           locations: data,
-        }))
+        }));
       }
     } catch {}
-  }
+  };
 
   const getFromPorts = async (auction, zipCode, location) => {
     try {
       const { data } = await axiosApi(
-        `/car/port_delivery_list/?auction=${auction}&zip_code=${zipCode}&location=${location}&body=${calculateData.body}`,
-      )
+        `/car/port_delivery_list/?auction=${auction}&zip_code=${zipCode}&location=${location}&body=${calculateData.body}`
+      );
 
-      setCalculator(prev => ({
+      setCalculator((prev) => ({
         ...prev,
         fromPorts: data,
-      }))
+      }));
     } catch {}
-  }
+  };
 
   return (
     <Box
@@ -171,9 +174,9 @@ const MainCalculator = () => {
       border="1px solid #323131"
       borderRadius="15px"
       sx={{
-        marginTop: { lx: '110px', xl: '100px' },
-        maxWidth: { xs: '440px', xl: '490px' },
-        color: { xs: '#231F1E', lx: '#fff' },
+        marginTop: { lx: "110px", xl: "100px" },
+        maxWidth: { xs: "440px", xl: "490px" },
+        color: { xs: "#231F1E", lx: "#fff" },
       }}
     >
       <Typography
@@ -182,8 +185,8 @@ const MainCalculator = () => {
         textAlign="center"
         textTransform="uppercase"
         sx={{
-          fontSize: { xs: '24px', lg: '32px', xl: '40px' },
-          margin: { xs: '16px 0 8px', xl: '18px 0 14px' },
+          fontSize: { xs: "24px", lg: "32px", xl: "40px" },
+          margin: { xs: "16px 0 8px", xl: "18px 0 14px" },
         }}
       >
         <Typography variant="span" color="#F47721">
@@ -197,15 +200,20 @@ const MainCalculator = () => {
         fontSize="18px"
         padding="0 30px 20px"
         sx={{
-          width: { xs: 'auto', lg: '420px', xl: '480px' },
-          p: { xs: '0 12px 20px', md: '0 30px 20px' },
+          width: { xs: "auto", lg: "420px", xl: "480px" },
+          p: { xs: "0 12px 20px", md: "0 30px 20px" },
         }}
       >
-        <Grid item xs={6} pr="18px" sx={{ marginY: { xs: '14px', xl: '20px' } }}>
+        <Grid
+          item
+          xs={6}
+          pr="18px"
+          sx={{ marginY: { xs: "14px", xl: "20px" } }}
+        >
           <FormControl fullWidth color="orange">
             <InputLabel
               id="select-label"
-              sx={{ fontSize: '1.1rem', color: { xs: '#231F1E', lx: '#fff' } }}
+              sx={{ fontSize: "1.1rem", color: { xs: "#231F1E", lx: "#fff" } }}
               color="orange"
             >
               Choose an auction
@@ -220,8 +228,12 @@ const MainCalculator = () => {
               onChange={changeHandler}
             >
               {calculator.auctions?.length !== 0 ? (
-                calculator.auctions.map(auction => (
-                  <MenuItem key={`auction${auction.id}`} value={auction.id} onClick={() => getLocations(auction.id)}>
+                calculator.auctions.map((auction) => (
+                  <MenuItem
+                    key={`auction${auction.id}`}
+                    value={auction.id}
+                    onClick={() => getLocations(auction.id)}
+                  >
                     {auction.title}
                   </MenuItem>
                 ))
@@ -231,11 +243,11 @@ const MainCalculator = () => {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={6} sx={{ marginY: { xs: '14px', xl: '20px' } }}>
+        <Grid item xs={6} sx={{ marginY: { xs: "14px", xl: "20px" } }}>
           <FormControl fullWidth color="orange">
             <InputLabel
               id="body-label"
-              sx={{ fontSize: '1.1rem', color: { xs: '#231F1E', lx: '#fff' } }}
+              sx={{ fontSize: "1.1rem", color: { xs: "#231F1E", lx: "#fff" } }}
               color="orange"
             >
               Body
@@ -250,7 +262,7 @@ const MainCalculator = () => {
               onChange={changeHandler}
             >
               {calculator.body?.length !== 0 ? (
-                calculator.body.map(body => (
+                calculator.body.map((body) => (
                   <MenuItem key={`body${body.id}`} value={body.id}>
                     {body.title}
                   </MenuItem>
@@ -261,11 +273,11 @@ const MainCalculator = () => {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={12} sx={{ marginY: { xs: '14px', xl: '20px' } }}>
+        <Grid item xs={12} sx={{ marginY: { xs: "14px", xl: "20px" } }}>
           <FormControl fullWidth color="orange">
             <InputLabel
               id="location-label"
-              sx={{ fontSize: '1.1rem', color: { xs: '#231F1E', lx: '#fff' } }}
+              sx={{ fontSize: "1.1rem", color: { xs: "#231F1E", lx: "#fff" } }}
               color="orange"
             >
               Location
@@ -280,11 +292,17 @@ const MainCalculator = () => {
               onChange={changeHandler}
             >
               {calculator.locations?.length !== 0 ? (
-                calculator.locations.map(location => (
+                calculator.locations.map((location) => (
                   <MenuItem
                     key={`location${location.id}`}
                     value={location.id}
-                    onClick={() => getFromPorts(location.auction, location.zip_code, location.location)}
+                    onClick={() =>
+                      getFromPorts(
+                        location.auction,
+                        location.zip_code,
+                        location.location
+                      )
+                    }
                   >
                     {location.location}
                   </MenuItem>
@@ -295,7 +313,12 @@ const MainCalculator = () => {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={6} pr="18px" sx={{ marginY: { xs: '14px', xl: '20px' } }}>
+        <Grid
+          item
+          xs={6}
+          pr="18px"
+          sx={{ marginY: { xs: "14px", xl: "20px" } }}
+        >
           <TextField
             className={classes.mainInput}
             label="Car price in Canada"
@@ -307,14 +330,14 @@ const MainCalculator = () => {
             onChange={changeHandler}
           />
         </Grid>
-        <Grid item xs={6} sx={{ marginY: { xs: '14px', xl: '20px' } }}>
+        <Grid item xs={6} sx={{ marginY: { xs: "14px", xl: "20px" } }}>
           <FormControl fullWidth color="orange">
             <InputLabel
               id="Shippingfromtheport-label"
-              sx={{ fontSize: '1.1rem', color: { xs: '#231F1E', lx: '#fff' } }}
+              sx={{ fontSize: "1.1rem", color: { xs: "#231F1E", lx: "#fff" } }}
               color="orange"
             >
-              Shipping from the port{' '}
+              Shipping from the port{" "}
               <Typography variant="span" color="red">
                 *
               </Typography>
@@ -329,7 +352,7 @@ const MainCalculator = () => {
               onChange={changeHandler}
             >
               {calculator.fromPorts?.length !== 0 ? (
-                calculator.fromPorts.map(port => (
+                calculator.fromPorts.map((port) => (
                   <MenuItem key={`fromPort${port.id}`} value={port.id}>
                     {port.title}
                   </MenuItem>
@@ -340,14 +363,19 @@ const MainCalculator = () => {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={6} pr="18px" sx={{ marginY: { xs: '14px', xl: '20px' } }}>
+        <Grid
+          item
+          xs={6}
+          pr="18px"
+          sx={{ marginY: { xs: "14px", xl: "20px" } }}
+        >
           <FormControl fullWidth color="orange">
             <InputLabel
               id="Destination-label"
-              sx={{ fontSize: '1.1rem', color: { xs: '#231F1E', lx: '#fff' } }}
+              sx={{ fontSize: "1.1rem", color: { xs: "#231F1E", lx: "#fff" } }}
               color="orange"
             >
-              Destination country{' '}
+              Destination country{" "}
               <Typography variant="span" color="red">
                 *
               </Typography>
@@ -362,7 +390,7 @@ const MainCalculator = () => {
               onChange={changeHandler}
             >
               {calculator.countries?.length !== 0 ? (
-                calculator.countries.map(country => (
+                calculator.countries.map((country) => (
                   <MenuItem key={`country${country.id}`} value={country.id}>
                     {country.title}
                   </MenuItem>
@@ -373,14 +401,14 @@ const MainCalculator = () => {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={6} sx={{ marginY: { xs: '14px', xl: '20px' } }}>
+        <Grid item xs={6} sx={{ marginY: { xs: "14px", xl: "20px" } }}>
           <FormControl fullWidth color="orange">
             <InputLabel
               id="Port-label"
-              sx={{ fontSize: '1.1rem', color: { xs: '#231F1E', lx: '#fff' } }}
+              sx={{ fontSize: "1.1rem", color: { xs: "#231F1E", lx: "#fff" } }}
               color="orange"
             >
-              Port of destination{' '}
+              Port of destination{" "}
               <Typography variant="span" color="red">
                 *
               </Typography>
@@ -395,7 +423,7 @@ const MainCalculator = () => {
               onChange={changeHandler}
             >
               {calculator.ports?.length !== 0 ? (
-                calculator.ports.map(port => (
+                calculator.ports.map((port) => (
                   <MenuItem key={`port${port.id}`} value={port.id}>
                     {port.title}
                   </MenuItem>
@@ -413,17 +441,27 @@ const MainCalculator = () => {
             fontWeight="500"
             padding="10px 15px"
             sx={{
-              background: { lx: '#3C3C3C' },
-              borderRadius: '3px',
-              margin: { xs: '14px 0 6px', xl: '20px 0 10px' },
-              border: { xs: '1px solid #CBCBCB', lx: 'none' },
+              background: { lx: "#3C3C3C" },
+              borderRadius: "3px",
+              margin: { xs: "14px 0 6px", xl: "20px 0 10px" },
+              border: { xs: "1px solid #CBCBCB", lx: "none" },
             }}
           >
-            <Box display="flex" justifyContent="space-between" alignItems="center">
-              <Typography textTransform="uppercase" sx={{ fontSize: { xs: '14px', lx: '15px', xl: '16px' } }}>
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+            >
+              <Typography
+                textTransform="uppercase"
+                sx={{ fontSize: { xs: "14px", lx: "15px", xl: "16px" } }}
+              >
                 service
               </Typography>
-              <Typography color="#F47721" sx={{ fontSize: { xs: '15px', lx: '18px', xl: '24px' } }}>
+              <Typography
+                color="#F47721"
+                sx={{ fontSize: { xs: "15px", lx: "18px", xl: "24px" } }}
+              >
                 $ {calculator.service_auto_canada}
               </Typography>
             </Box>
@@ -435,18 +473,32 @@ const MainCalculator = () => {
           fontWeight="500"
           padding="10px 15px"
           sx={{
-            background: { lx: '#3C3C3C' },
-            borderRadius: '3px',
-            margin: { xs: '14px 0 6px', xl: '20px 0 10px' },
-            border: { xs: '1px solid #CBCBCB', lx: 'none' },
+            background: { lx: "#3C3C3C" },
+            borderRadius: "3px",
+            margin: { xs: "14px 0 6px", xl: "20px 0 10px" },
+            border: { xs: "1px solid #CBCBCB", lx: "none" },
           }}
         >
-          <Box display="flex" justifyContent="space-between" alignItems="center">
-            <Typography textTransform="uppercase" sx={{ fontSize: { xs: '14px', lx: '15px', xl: '16px' } }}>
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Typography
+              textTransform="uppercase"
+              sx={{ fontSize: { xs: "14px", lx: "15px", xl: "16px" } }}
+            >
               total amount
             </Typography>
-            <Typography color="#F47721" sx={{ fontSize: { xs: '15px', lx: '18px', xl: '24px' } }}>
-              {loader ? <CircularProgress color="orange" size={20} /> : `$ ${calculator.total}`}
+            <Typography
+              color="#F47721"
+              sx={{ fontSize: { xs: "15px", lx: "18px", xl: "24px" } }}
+            >
+              {loader ? (
+                <CircularProgress color="orange" size={20} />
+              ) : (
+                `$ ${calculator.total}`
+              )}
             </Typography>
           </Box>
         </Grid>
@@ -456,16 +508,26 @@ const MainCalculator = () => {
           fontWeight="500"
           padding="10px 15px"
           sx={{
-            background: { lx: '#3C3C3C' },
-            borderRadius: '3px',
-            border: { xs: '1px solid #CBCBCB', lx: 'none' },
+            background: { lx: "#3C3C3C" },
+            borderRadius: "3px",
+            border: { xs: "1px solid #CBCBCB", lx: "none" },
           }}
         >
-          <Box display="flex" justifyContent="space-between" alignItems="center">
-            <Typography textTransform="uppercase" sx={{ fontSize: { xs: '14px', lx: '15px', xl: '16px' } }}>
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Typography
+              textTransform="uppercase"
+              sx={{ fontSize: { xs: "14px", lx: "15px", xl: "16px" } }}
+            >
               Deposit
             </Typography>
-            <Typography color="#F47721" sx={{ fontSize: { xs: '15px', lx: '18px', xl: '24px' } }}>
+            <Typography
+              color="#F47721"
+              sx={{ fontSize: { xs: "15px", lx: "18px", xl: "24px" } }}
+            >
               $ {Math.floor(calculator.total * 0.1)}
             </Typography>
           </Box>
@@ -477,7 +539,7 @@ const MainCalculator = () => {
         </Grid>
       </Grid>
     </Box>
-  )
-}
+  );
+};
 
-export default MainCalculator
+export default MainCalculator;

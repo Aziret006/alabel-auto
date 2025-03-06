@@ -1,7 +1,7 @@
-import React from 'react'
-import Title from '../UI/Title/Title'
-import SubTitle from '../UI/SubTitle/SubTitle'
-import './OurContacts.css'
+import React from "react";
+import Title from "../UI/Title/Title";
+import SubTitle from "../UI/SubTitle/SubTitle";
+import "./OurContacts.css";
 
 const OurContacts = ({ classes }) => (
   <div className={`container our_contacts_con ${classes}`}>
@@ -40,7 +40,7 @@ const OurContacts = ({ classes }) => (
       <div className="our_contacts_right">
         <iframe
           title="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7587164.591701395!2d-113.05666418355389!3d57.502145824152194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0d03d337cc6ad9%3A0x9968b72aa2438fa5!2z0JrQsNC90LDQtNCw!5e0!3m2!1sru!2skg!4v1684134582479!5m2!1sru!2skg"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44978534.31200903!2d-96!3d56!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0d03d337cc6ad9%3A0x9968b72aa2438fa5!2sCanada!5e1!3m2!1sen!2skg!4v1741167464886!5m2!1sen!2skg"
           width="600"
           height="400"
           allowFullScreen=""
@@ -50,6 +50,6 @@ const OurContacts = ({ classes }) => (
       </div>
     </div>
   </div>
-)
+);
 
-export default OurContacts
+export default OurContacts;

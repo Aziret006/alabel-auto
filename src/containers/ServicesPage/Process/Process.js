@@ -1,10 +1,10 @@
-import React from 'react'
-import UpTitle from '../../../components/UI/UpTitle/UpTitle'
-import Title from '../../../components/UI/Title/Title'
-import './Process.css'
+import React from "react";
+import UpTitle from "../../../components/UI/UpTitle/UpTitle";
+import Title from "../../../components/UI/Title/Title";
+import "./Process.css";
 
-import processImg from '../../../assets/images/process_car.png'
-import { processData } from '../../../data'
+import processImg from "../../../assets/images/process_car.png";
+import { processData } from "../../../data";
 
 const Process = () => (
   <div className="container">
@@ -30,6 +30,6 @@ const Process = () => (
       </div>
     </div>
   </div>
-)
+);
 
-export default Process
+export default Process;

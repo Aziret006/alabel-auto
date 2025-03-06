@@ -1,12 +1,12 @@
-import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Autoplay, Pagination } from 'swiper'
-import 'swiper/swiper-bundle.css'
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Pagination } from "swiper";
+import "swiper/swiper-bundle.css";
 
-import './SliderComponent.css'
-import car from '../../../../assets/images/main_promo_car.png'
+import "./SliderComponent.css";
+import car from "../../../../assets/images/main_promo_car.png";
 
-SwiperCore.use([Autoplay, Pagination])
+SwiperCore.use([Autoplay, Pagination]);
 
 const SliderComponent = () => {
   const slides = [
@@ -26,7 +26,7 @@ const SliderComponent = () => {
       id: 4,
       imageUrl: car,
     },
-  ]
+  ];
 
   return (
     <div className="slider-wrapper">
@@ -38,14 +38,14 @@ const SliderComponent = () => {
         loop
         className="swiper-container"
       >
-        {slides.map(slide => (
+        {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <img src={slide.imageUrl} alt={`Slide ${slide.id}`} />
           </SwiperSlide>
         ))}
       </Swiper>
     </div>
-  )
-}
+  );
+};
 
-export default SliderComponent
+export default SliderComponent;

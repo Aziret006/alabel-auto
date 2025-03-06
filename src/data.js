@@ -1,51 +1,59 @@
-import percent from './assets/icons/percent.png'
-import earth from './assets/icons/earth.png'
-import medal from './assets/icons/medal.png'
-import box from './assets/icons/box.png'
-import like from './assets/icons/like.png'
-import car1 from './assets/images/black-car.jpg'
-import car2 from './assets/images/blue-car.jpg'
-import car3 from './assets/images/orange-car.jpg'
-import car4 from './assets/images/white-car.jpg'
+import percent from "./assets/icons/percent.png";
+import earth from "./assets/icons/earth.png";
+import medal from "./assets/icons/medal.png";
+import box from "./assets/icons/box.png";
+import like from "./assets/icons/like.png";
+import car1 from "./assets/images/black-car.jpg";
+import car2 from "./assets/images/blue-car.jpg";
+import car3 from "./assets/images/orange-car.jpg";
+import car4 from "./assets/images/white-car.jpg";
 
 export const years = [
-  2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018,
-  2019, 2020, 2021, 2022, 2023,
-]
+  2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012,
+  2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023,
+];
 
 export const mileages = [
-  '0 - 25000',
-  '25000 - 50000',
-  '50000 - 75000',
-  '75000 - 100000',
-  '100000 - 150000',
-  '150000 - 200000',
-  '200000 <',
-]
+  "0 - 25000",
+  "25000 - 50000",
+  "50000 - 75000",
+  "75000 - 100000",
+  "100000 - 150000",
+  "150000 - 200000",
+  "200000 <",
+];
 
-export const fuelType = ['Flexible Fuel', 'Diesel', 'Gasoline', 'Hybrid', 'Electric', 'PlugInHybrid', 'Other']
+export const fuelType = [
+  "Flexible Fuel",
+  "Diesel",
+  "Gasoline",
+  "Hybrid",
+  "Electric",
+  "PlugInHybrid",
+  "Other",
+];
 
-export const transmission = ['AUTOMATIC', 'MANUAL']
+export const transmission = ["AUTOMATIC", "MANUAL"];
 
-export const sortDateAuction = ['near', 'late']
+export const sortDateAuction = ["near", "late"];
 
-export const sortYearMade = ['new', 'old']
+export const sortYearMade = ["new", "old"];
 
 export const mainAdvantages = [
-  { img: percent, title: 'Attractive prices' },
-  { img: earth, title: 'Less competition, more opportunities' },
-  { img: medal, title: 'Transparent vehicle history' },
+  { img: percent, title: "Attractive prices" },
+  { img: earth, title: "Less competition, more opportunities" },
+  { img: medal, title: "Transparent vehicle history" },
   {
     img: box,
-    title: 'Measurements in kilometers and liters',
+    title: "Measurements in kilometers and liters",
   },
-  { img: like, title: 'High quality and safety' },
+  { img: like, title: "High quality and safety" },
   {
     img: medal,
-    title: 'Are you buying for export? We will cover 100% of all taxes!',
+    title: "Are you buying for export? We will cover 100% of all taxes!",
   },
-  { img: earth, title: 'Reliability and transparency.' },
-]
+  { img: earth, title: "Reliability and transparency." },
+];
 
 export const processData = [
   {
@@ -92,8 +100,8 @@ export const processData = [
           />
         </svg>`,
     title:
-      'Browse through available vehicles on IAA, Copart, ADESA, or other sources (dealers, private sellers). You can choose from cars, motorcycles, ATVs, snowmobiles, and jet skis.',
-    text: 'Choose Your Vehicle',
+      "Browse through available vehicles on IAA, Copart, ADESA, or other sources (dealers, private sellers). You can choose from cars, motorcycles, ATVs, snowmobiles, and jet skis.",
+    text: "Choose Your Vehicle",
   },
   {
     img: `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'>
@@ -129,8 +137,8 @@ export const processData = [
           />
         </svg>`,
     title:
-      'Once you ve selected the vehicle, contact us for advice or assistance. We can help you with vehicle selection, history verification, and provide more details about the options available.',
-    text: 'Contact Us',
+      "Once you ve selected the vehicle, contact us for advice or assistance. We can help you with vehicle selection, history verification, and provide more details about the options available.",
+    text: "Contact Us",
   },
   {
     img: `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'>
@@ -149,9 +157,9 @@ export const processData = [
             d='m65 25 .02 9.947a1.26 1.26 0 0 1-1.376 1.273L40 33.854l-.015-7.66 23.64-2.459A1.26 1.26 0 0 1 65 25Z'
           />
         </svg>`,
-    text: 'Vehicle History Verification',
+    text: "Vehicle History Verification",
     title:
-      'We check the history of each vehicle to confirm its condition, mileage, and ensure that there are no hidden issues. We provide you with a report',
+      "We check the history of each vehicle to confirm its condition, mileage, and ensure that there are no hidden issues. We provide you with a report",
   },
   {
     img: `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'>
@@ -192,8 +200,8 @@ export const processData = [
           </defs>
         </svg>`,
     title:
-      'To begin the purchase process, we require a 20% deposit of the estimated vehicle cost. This ensures that your interest is secured and that we can proceed with the bidding or purchase on your behalf',
-    text: 'Deposit Payment',
+      "To begin the purchase process, we require a 20% deposit of the estimated vehicle cost. This ensures that your interest is secured and that we can proceed with the bidding or purchase on your behalf",
+    text: "Deposit Payment",
   },
   {
     img: `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'>
@@ -215,58 +223,58 @@ export const processData = [
           </defs>
         </svg>`,
     title:
-      ' If you are interested in buying through an auction, we assist with the bidding process and purchase through our account. Our experience ensures that you get the best price for your chosen vehicle.',
-    text: 'Bidding and Purchase',
+      " If you are interested in buying through an auction, we assist with the bidding process and purchase through our account. Our experience ensures that you get the best price for your chosen vehicle.",
+    text: "Bidding and Purchase",
   },
-]
+];
 
 export const cars = [
   {
     img: car1,
-    title: 'Honda civic si',
-    description: 'Mii 1.0 ASG 3 porte Chic',
+    title: "Honda civic si",
+    description: "Mii 1.0 ASG 3 porte Chic",
     price: 5260,
   },
   {
     img: car2,
-    title: 'Honda civic si',
-    description: 'Mii 1.0 ASG 3 porte Chic',
+    title: "Honda civic si",
+    description: "Mii 1.0 ASG 3 porte Chic",
     price: 5260,
   },
   {
     img: car3,
-    title: 'Honda civic si',
-    description: 'Mii 1.0 ASG 3 porte Chic',
+    title: "Honda civic si",
+    description: "Mii 1.0 ASG 3 porte Chic",
     price: 5260,
   },
   {
     img: car4,
-    title: 'Honda civic si',
-    description: 'Mii 1.0 ASG 3 porte Chic',
+    title: "Honda civic si",
+    description: "Mii 1.0 ASG 3 porte Chic",
     price: 5260,
   },
   {
     img: car1,
-    title: 'Honda civic si',
-    description: 'Mii 1.0 ASG 3 porte Chic',
+    title: "Honda civic si",
+    description: "Mii 1.0 ASG 3 porte Chic",
     price: 5260,
   },
   {
     img: car2,
-    title: 'Honda civic si',
-    description: 'Mii 1.0 ASG 3 porte Chic',
+    title: "Honda civic si",
+    description: "Mii 1.0 ASG 3 porte Chic",
     price: 5260,
   },
   {
     img: car3,
-    title: 'Honda civic si',
-    description: 'Mii 1.0 ASG 3 porte Chic',
+    title: "Honda civic si",
+    description: "Mii 1.0 ASG 3 porte Chic",
     price: 5260,
   },
   {
     img: car4,
-    title: 'Honda civic si',
-    description: 'Mii 1.0 ASG 3 porte Chic',
+    title: "Honda civic si",
+    description: "Mii 1.0 ASG 3 porte Chic",
     price: 5260,
   },
-]
+];

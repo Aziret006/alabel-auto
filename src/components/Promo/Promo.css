@@ -21,6 +21,11 @@
     cover;
   min-height: 588px;
 }
+.trecking_promo {
+  background: url("../../assets/images/Background.png") no-repeat 50% 65% /
+    cover;
+  min-height: 588px;
+}
 
 .promo_con {
   padding-top: 198px !important;

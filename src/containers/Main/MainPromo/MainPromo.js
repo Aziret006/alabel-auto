@@ -1,9 +1,9 @@
-import React from 'react'
-import MainCalculator from './MainCalculator/MainCalculator'
-import SliderComponent from './SliderComponent/SliderComponent'
-import './MainPromo.css'
-import Smoke from '../../../assets/images/smoke.png'
-import Line from '../../../assets/images/main_promo_line.png'
+import React from "react";
+import MainCalculator from "./MainCalculator/MainCalculator";
+import SliderComponent from "./SliderComponent/SliderComponent";
+import "./MainPromo.css";
+import Smoke from "../../../assets/images/smoke.png";
+import Line from "../../../assets/images/main_promo_line.png";
 
 const MainPromo = () => (
   <div className="main_promo">
@@ -27,6 +27,6 @@ const MainPromo = () => (
       </div>
     </div>
   </div>
-)
+);
 
-export default MainPromo
+export default MainPromo;

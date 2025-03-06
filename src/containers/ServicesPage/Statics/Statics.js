@@ -1,5 +1,5 @@
-import React from 'react'
-import './Statics.css'
+import React from "react";
+import "./Statics.css";
 
 const Statics = () => (
   <div className="statics">
@@ -18,6 +18,6 @@ const Statics = () => (
       </div>
     </div>
   </div>
-)
+);
 
-export default Statics
+export default Statics;

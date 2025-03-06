@@ -10,14 +10,14 @@
 
 .nav ul li {
   display: inline-block;
-  margin-right: 60px;
+  margin-right: 40px;
 }
 
 .nav ul li:last-child {
   margin-right: 0 !important;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1480px) {
   .nav ul li {
     margin-right: 30px;
   }
