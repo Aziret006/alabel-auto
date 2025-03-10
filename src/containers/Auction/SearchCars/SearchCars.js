@@ -6,6 +6,7 @@ import CarCard from "../../../components/CarCard/CarCard";
 import Spinner from "../../../components/UI/Spinner/Spinner";
 import "./SearchCars.css";
 import axiosApi from "../../../axiosApi";
+import { Api } from "../../../Api";
 
 const SearchCars = () => {
   const [searchData, setSearchData] = useState(null);
@@ -28,7 +29,8 @@ const SearchCars = () => {
         let parsed = "";
         if (brandId) parsed = parseInt(brandId, 10);
 
-        const { data } = await axiosApi(`/car/list/?brand=${parsed}`);
+        const { data } = await (`${Api}/car/list/?brand=${parsed}`);
+        
 
         if (data.count && data.count > 15) {
           const number = data.count / 15;
@@ -54,9 +56,8 @@ const SearchCars = () => {
         setLoader(false);
       }
     };
-
     getCars().catch();
-  }, [location.search]);
+  }, [location.search]);   
 
   const getData = async (dataSearch, check) => {
     window.scrollTo(0, 590);

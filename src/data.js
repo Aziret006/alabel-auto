@@ -34,11 +34,8 @@ export const fuelType = [
 ];
 
 export const transmission = ["AUTOMATIC", "MANUAL"];
-
 export const sortDateAuction = ["near", "late"];
-
 export const sortYearMade = ["new", "old"];
-
 export const mainAdvantages = [
   { img: percent, title: "Attractive prices" },
   { img: earth, title: "Less competition, more opportunities" },

@@ -8,7 +8,7 @@ const items = [
   { name: "How to buy", to: "/services" },
   { name: "Auction", to: "/auction" },
   { name: "Contacts", to: "/contacts" },
-  { name: "Trecking", to: "/trecking" },
+  { name: "Tracking", to: "/trecking" },
 ];
 
 const NavigationBlock = ({ active, actionMenu, color }) => (

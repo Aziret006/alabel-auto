@@ -22,10 +22,10 @@ const Portfolio = () => {
       } catch {
         setLoader(false);
       }
-    };
-
+    }
     getCars().catch();
-  }, []);
+  }
+  , []);
 
   return (
     <div className="portfolio">

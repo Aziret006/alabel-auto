@@ -31,7 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 71px; /* Оптимизированное расстояние */
+  gap: 71px; 
   flex-wrap: wrap;
 }
 
@@ -39,13 +39,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f47a22;
+  background-color: #ffff;
   padding: 32px 28px;
-  flex: 1 1 250px; /* Фиксируем размер для лучшей адаптивности */
+  flex: 1 1 250px; 
   min-width: 180px;
-  max-width: 300px; /* Чтобы не растягивалось слишком сильно */
+  max-width: 300px;          
   border-radius: 6px;
   transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 1px 10px 0px #231f1e17;
+}
+
+.carrier-item:hover {
+  background-color: #f47721;
 }
 
 .carrier-logo-wrapper {
@@ -70,6 +75,88 @@
   text-transform: uppercase;
   color: #231f1e;
   text-align: center;
+}
+
+/* .search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+.search-form span {
+  position: absolute;
+  left: 157vh;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f47721;
+  border-radius: 300px;
+}
+input {
+  max-width: 600px;
+  width: 100%;
+  height: 48px;
+  border: 1px solid #c5c5c7;
+  background: #fefdfe;
+  border-radius: 100px;
+  outline: none;
+  padding-left: 15px;
+  position: relative;
+} */
+
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+  max-width: 500px; 
+  width: 100%;
+  margin: 0 auto;
+}
+
+.search-form input {
+  flex-grow: 1; 
+  padding: 15px 50px 15px 15px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+}
+
+.search-form span {
+  position: absolute;
+  right: 10px; 
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f47721;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Для адаптивности */
+@media (max-width: 768px) {
+  .search-form {
+    max-width: 100%;
+  }
+}
+
+
+input::placeholder {
+  color: #b7b7b7;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 /* Планшеты */

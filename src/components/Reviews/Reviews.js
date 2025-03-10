@@ -25,7 +25,6 @@ const Reviews = () => {
       try {
         setLoader(true);
         const { data } = await axiosApi("/car/review/");
-
         if (data) {
           setReviews(data);
         }
