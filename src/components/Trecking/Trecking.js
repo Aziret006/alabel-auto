@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { RiSearchLine } from "react-icons/ri";
-import axios from "axios";
+import axios from "axios"; 
 import Promo from "../Promo/Promo";
 import OurContacts from "../OurContacts/OurContacts";
 import Feedback from "../Feedback/Feedback";
@@ -98,7 +98,6 @@ function Trecking() {
           <span onClick={() => setSearchQuery(input)}>
             <RiSearchLine size={18} color="#fff" />
           </span>
-          <div></div>
         </form>
         <h3 className="carrier-title">Choose your ocean carrier company</h3>
         <div className="carrier-row">
