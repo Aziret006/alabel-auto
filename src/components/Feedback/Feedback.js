@@ -48,7 +48,7 @@ const Feedback = ({ footer }) => {
   const { classes } = useStyles();
 
   const [state, setState] = useState({
-    name: "",
+    email: "",
     phone: "",
   });
   const [loader, setLoader] = useState(false);
@@ -67,7 +67,12 @@ const Feedback = ({ footer }) => {
 
     try {
       setLoader(true);
-      await axiosApi.post("/car_main/feedback/", state);
+      await axiosApi.post("/car/feedback-new/", state,{
+        headers: {
+          "Accept": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMTM1MTc3LCJpYXQiOjE3NDE1OTkxNzcsImp0aSI6ImE2ZTIxZGVjMTdmNTRjYWY5MzBlOGE4YzhjMzczNTYyIiwidXNlcl9pZCI6MX0.Rb6No4cAlmGLWjaKdGBS5JKyhMWtL1CVfCYDp4cJPrM",
+        }
+      });
 
       setLoader(false);
       Swal.fire({
@@ -121,7 +126,7 @@ const Feedback = ({ footer }) => {
             name="phone"
             label="Phone"
             type="tel"
-            color="orange"
+            color="orange"  
             fullWidth
             value={state.phone}
             onChange={onChange}
@@ -186,12 +191,12 @@ const Feedback = ({ footer }) => {
           <Grid item xs={12} sx={{ mb: { xs: "50px", lg: "60px" } }}>
             <TextField
               className={classes.feedbackInput}
-              name="name"
+              name="email"
               label="Your E-mail"
               type="text"
               color="orange"
               fullWidth
-              value={state.name}
+              value={state.email}
               onChange={onChange}
               required
               variant="standard"

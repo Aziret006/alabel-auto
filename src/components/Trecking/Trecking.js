@@ -117,7 +117,6 @@ function Trecking() {
                   />
                 </div>
               </a>
-              <p className="carrier-name">{carrier.name}</p>
             </div>
           ))}
         </div>
@@ -139,7 +138,6 @@ function Trecking() {
                     />
                   </div>
                 </a>
-                <p className="carrier-name">{carrier.name}</p>
               </div>
             ))
           ) : (
